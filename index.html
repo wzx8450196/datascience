@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -219,6 +232,7 @@ $(function(){
         
     })
 })</script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 
 <body>
@@ -468,9 +482,10 @@ $(function(){
         </ul>
         </div>
         </div>
-        <div id="zoomin" style="position: absolute;left:10px;bottom:120px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</div>
-<div id="zoomout" style="position: absolute;left:10px;bottom:60px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</div>
-<div id="cljl" style="position: absolute;left:10px;bottom:180px;width:110px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;font-size:12px;">鼠标点击以计算距离</div>
+        <div id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</div>
+<div id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</div>
+ <div id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</div>
+   <div id="cl2" style="position: absolute;left:10px;bottom:60px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;font-size:6px">取消距离量测</div>
         </div>
         <div class="slide">第三屏的第二屏</div>
         <div class="slide">第三屏的第三屏</div>
@@ -566,13 +581,53 @@ var jiathis_config={
     document.getElementById('zoomout').onclick=function(){
         map.zoomOut();
     };
-     map.plugin(['AMap.MouseTool'],function(){
-            var tool = new AMap.MouseTool(map);
-            tool.rule();
-          });
-        
 
+
+
+
+  
+     map.plugin(["AMap.RangingTool"], function() {
+        ruler1 = new AMap.RangingTool(map);
+        AMap.event.addListener(ruler1, "end", function(e) {
+            ruler1.turnOff();
+        });
+        var sMarker = {
+            icon: new AMap.Icon({
+                size: new AMap.Size(19, 31),//图标大小
+                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png"
+            })
+        };
+        var eMarker = {
+            icon: new AMap.Icon({
+                size: new AMap.Size(19, 31),//图标大小
+                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b2.png"
+            }),
+            offset: new AMap.Pixel(-9, -31)
+        };
+        var lOptions = {
+            strokeStyle: "solid",
+            strokeColor: "#FF33FF",
+            strokeOpacity: 1,
+            strokeWeight: 2
+        };
+        var rulerOptions = {startMarkerOptions: sMarker, endMarkerOptions: eMarker, lineOptions: lOptions};
+        ruler2 = new AMap.RangingTool(map, rulerOptions);
+    });
+    //启用默认样式测距
+    function startRuler1() {
+        ruler2.turnOff();
+        ruler1.turnOn();
+    }
+    //启用自定义样式测距
+    function startRuler2() {
+        ruler1.turnOff();
        
+    };      
+
+      document.getElementById('cl1').onclick=function(){
+       javascript:startRuler1();}
+document.getElementById('cl2').onclick=function(){
+       javascript:startRuler2();}
 
 
 var marker1_1 = new AMap.Marker({
@@ -807,17 +862,17 @@ var marker1_1 = new AMap.Marker({
         content: "樱花苑4栋"
       });
 
-var marker = new AMap.Marker({
+var marker5_1 = new AMap.Marker({
         position: [106.641829,26.371088],
     });
-    marker.setMap(map);
+    marker5_1.setMap(map);
     // 
-    marker.setAnimation('AMAP_ANIMATION_BOUNCE');
-    marker.setTitle('一食堂');
-
-
+    
+    marker5_1.setTitle('一食堂');
+    marker5_1.hide();
+    marker5_1.setAnimation('AMAP_ANIMATION_BOUNCE');
     // 设置label标签
-    marker.setLabel({
+    marker5_1.setLabel({
         offset: new AMap.Pixel(20, 20),//
         content: "一食堂"
       });
@@ -825,49 +880,49 @@ var marker = new AMap.Marker({
 
 
 
-    var marker = new AMap.Marker({
+    var marker5_2 = new AMap.Marker({
         position: [106.642112,26.37427],
     });
-    marker.setMap(map);
+    marker5_2.setMap(map);
     // 
-    marker.setAnimation('AMAP_ANIMATION_BOUNCE');
-    marker.setTitle('二食堂 ');
-    
+    marker5_2.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_2.setTitle('二食堂 ');
+    marker5_2.hide();
 
     // 设置label标签
-    marker.setLabel({
+    marker5_2.setLabel({
         offset: new AMap.Pixel(20, 20),//
         content: "二食堂"
       });
 
 
 
-    var marker = new AMap.Marker({
+    var marker5_3 = new AMap.Marker({
         position: [106.642709,26.382269],
     });
-    marker.setMap(map);
+    marker5_3.setMap(map);
     // 
-    marker.setAnimation('AMAP_ANIMATION_BOUNCE');
-    marker.setTitle('三食堂 ');
- 
+    marker5_3.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_3.setTitle('三食堂 ');
+    marker5_3.hide();
 
     // 设置label标签
-    marker.setLabel({
+    marker5_3.setLabel({
         offset: new AMap.Pixel(20, 20),//
         content: "三食堂"
       });
 
 
-    var marker = new AMap.Marker({
+    var marker5_4 = new AMap.Marker({
         position: [106.644938,26.384215],
     });
-    marker.setMap(map);
+    marker5_4.setMap(map);
     // 
-    marker.setAnimation('AMAP_ANIMATION_BOUNCE');
-    marker.setTitle('四食堂 ');
-
+    marker5_4.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_4.setTitle('四食堂 ');
+    marker5_4.hide();
     // 设置label标签
-    marker.setLabel({
+    marker5_4.setLabel({
         offset: new AMap.Pixel(20, 20),//
         content: "四食堂"
       });
@@ -936,10 +991,10 @@ var marker = new AMap.Marker({
 
 
        document.getElementById('yst').onclick=function(){
-        heatmap1.show();
+        heatmap1.show() || marker5_1.show()
 
     };    document.getElementById('yc').onclick=function(){
-                heatmap1.hide() || heatmap2.hide() || heatmap3.hide() || heatmap4.hide() ||  marker1_1.hide() || marker1_2.hide() || marker1_3.hide()
+                heatmap1.hide() || heatmap2.hide() || heatmap3.hide() || heatmap4.hide() || marker5_1.hide() || marker5_2.hide() || marker5_3.hide() || marker5_4.hide()
             };
 
 
@@ -988,10 +1043,10 @@ var marker = new AMap.Marker({
         }
     }); 
 
-            document.getElementById('st2').onclick=function(){
-        heatmap2.show();
+           document.getElementById('st2').onclick=function(){
+        heatmap2.show() || marker5_2.show()
 
-    };    
+    };
             
             //heatmap.hide();
     //isHotspot:true
@@ -1040,10 +1095,10 @@ var marker = new AMap.Marker({
         }
     }); 
 
-             document.getElementById('st3').onclick=function(){
-        heatmap3.show();
+   document.getElementById('st3').onclick=function(){
+        heatmap3.show() || marker5_3.show()
 
-    };   
+    };  
             
             //heatmap.hide();
     //isHotspot:true
@@ -1089,11 +1144,10 @@ var marker = new AMap.Marker({
         }
     }); 
 
-             document.getElementById('st4').onclick=function(){
-        heatmap4.show();
+  document.getElementById('st4').onclick=function(){
+        heatmap4.show() || marker5_4.show()
 
-
-    };   
+    };  
            
             //heatmap.hide();
     //isHotspot:true
