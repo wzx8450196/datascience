@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,6 +6,9 @@
 <link rel="stylesheet" href="styles/jquery.fullPage.css"/>
 <link rel="stylesheet" href="styles/reset.css"/>
 <link rel="stylesheet" href="carousel.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="scripts/jquery-1.8.3.min.js"></script>
+<script src="scripts/script.js"></script>
 
 <style type="text/css">
 *{
@@ -32,16 +22,19 @@ font-size:16px;
     background-size:cover;
 }
 #page-2{
-    background-image: url(images/1BG.jpg);  
+    background-image: url(images/2BG.jpg);  
     position:relative;
+    background-size: cover;
 }   
 #page-3{
     background-image: url(images/1BG.jpg);
+    background-size:cover;
 }
 
 #page-4{
     background-image: url(images/2BG.jpg);
     background-size:cover;
+
 }
 #page-5{
     background-image: url(images/2BG.jpg);
@@ -181,7 +174,11 @@ color:#FFF
 #qingshi ul{
     bottom:65px;
 }
-
+#logo{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
 </style>
 
 
@@ -226,7 +223,7 @@ $(function(){
         'verticalCentered': false,
         'css3': true,
         'sectionsColor': ['#01253D', '#01253C', '#000', '#695684','#000'],
-        anchors: ['page1', 'page2', 'page3', 'page4'],
+        anchors: ['page1', 'page2', 'page3', 'page4','page5'],
         'navigation': true,
         'navigationPosition': 'right',
         
@@ -238,8 +235,18 @@ $(function(){
 <body>
 <div id="h5">
     <div class="section" id="page-1">
+
+
+
+
+	<div id="logo">
+    <img img src="images/logo.png" width="80%"  height="80%">
+    </div>
 	
-	
+
+
+
+
 	<div id="top">
  <!-- 代码 开始 -->
     <div class="wrap">
@@ -267,7 +274,7 @@ $(function(){
                         <div class="expdiv-list">
                         <a href="#page2" class="btn zj" id="A4"><span class="icon"></span>
                                 <span class="text">图书馆数据</span></a>
-                                <a href="#page3" class="btn zj" id="A5"><span class="icon"></span>
+                                <a href="#page4" class="btn zj" id="A5"><span class="icon"></span>
                                 <span class="text">食堂数据</span></a>
                         </div>
                     </div>
@@ -275,13 +282,13 @@ $(function(){
                         <div class="expdiv-list">
                            <a href="#page2"  class="btn zj" id="A1"><span class="icon"></span>
                                 <span class="text">图书馆数据分析</span></a>
-                                <a href="#page3" class="btn zj" id="A2"><span class="icon"></span>
+                                <a href="#page4" class="btn zj" id="A2"><span class="icon"></span>
                                 <span class="text">食堂数据分析</span></a>
                         </div>
                     </div>
                     <div id="personalItem" class="item">
                         <div class="expdiv-list">
-                           <a href="#page4"  class="btn zj" id="A1"><span class="icon"></span>
+                           <a href="#page5"  class="btn zj" id="A1"><span class="icon"></span>
                                 <span class="text">不虚小组个人信息</span></a>
                         </div>
                     </div>
@@ -461,7 +468,46 @@ $(function(){
         <div class="slide">第二屏的第五屏</div>
         <div class="slide">第二屏的第六屏</div>
     </div>
+
     <div class="section" id="page-3">
+	<div class="box">
+		<div class="link mission-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="嘿嘿嘿嘿嘿嘿">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			早中晚
+			</a>
+		</div>
+		<div class="link play-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="哈哈哈哈哈哈哈">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			均值消费
+			</a>
+		</div>
+		<div class="link touch-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="呵呵呵呵呵呵">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			比值
+			</a>
+		</div>
+		<p class="tip"><em></em><span></span></p>
+	</div>
+    </div>
+
+
+
+    <div class="section" id="page-4">
         <div class="slide" id="map">
         <div class="shitang">
         <ul>
@@ -485,7 +531,7 @@ $(function(){
         <div id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</div>
 <div id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</div>
  <div id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</div>
-   <div id="cl2" style="position: absolute;left:10px;bottom:60px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;font-size:6px">取消距离量测</div>
+
         </div>
         <div class="slide">第三屏的第二屏</div>
         <div class="slide">第三屏的第三屏</div>
@@ -493,49 +539,18 @@ $(function(){
         <div class="slide">第三屏的第五屏</div>
         <div class="slide">第三屏的第六屏</div>
     </div>
-    <div class="section" id="page-4">
-	
-	
 
-	<p style="height:175px;"></p>
-	<div class="J_Poster poster-main" data-setting='{
-                                                                                        "width":1380,
-                                                                                        "height":295,
-                                                                                        "posterWidth":699,
-                                                                                        "posterHeight":295,
-                                                                                        "scale":0.8,
-                                                                                        "autoPlay":true,
-                                                                                        "delay":2000,
-                                                                                        "speed":300
-    																					}'>
-	<div class="poster-btn poster-prev-btn"></div>
-    <ul class="poster-list">
-        <li class="poster-item"><a href="#"><img src="zz.jpg"  width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="lj.jpg"  width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="zst.jpg" width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="fy.jpg"  width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="wrx.jpg" width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="yly.jpg" width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="hy.jpg"  width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="yxz.jpg" width="100%"  height="100%"></a></li>
-        <li class="poster-item"><a href="#"><img src="lsl.jpg" width="100%"  height="100%"></a></li>
-		<li class="poster-item"><a href="#"><img src="lcw.jpg" width="100%"  height="100%"></a></li>
-		<li class="poster-item"><a href="#"><img src="wzx.jpg" width="100%"  height="100%"></a></li>    
-    </ul>
-    <div class="poster-btn poster-next-btn"></div>
-</div>
 
-<script>
 
-$(function(){
-	Carousel.init($(".J_Poster"));
-});
-</script>
-	
 
-	</div>
+
+
+
+
 <div class="section" id="page-5">
-<!-- JiaThis Button BEGIN -->
+
+    
+    <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32">
 <a class="jiathis_button_qzone"></a>
 <a class="jiathis_button_tsina"></a>
@@ -547,21 +562,61 @@ $(function(){
 </div>
 <script type="text/javascript" >
 var jiathis_config={
-	siteNum:15,
-	sm:"msn,fb,twitter,googleplus,yixin,kaixin001,email,fav,cqq,feixin,douban,tieba,copy,ujian,ishare",
-	summary:"",
-	boldNum:6,
-	shortUrl:false,
-	hideMore:true
+    siteNum:15,
+    sm:"msn,fb,twitter,googleplus,yixin,kaixin001,email,fav,cqq,feixin,douban,tieba,copy,ujian,ishare",
+    summary:"",
+    boldNum:6,
+    shortUrl:false,
+    hideMore:true
 }
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
+    <p style="height:175px;"></p>
+    <div class="J_Poster poster-main" data-setting='{
+            "width":1380,
+            "height":295,
+            "posterWidth":699,
+            "posterHeight":295,
+            "scale":0.8,
+            "autoPlay":true,
+            "delay":2000,
+            "speed":300
+            }'>
+    <div class="poster-btn poster-prev-btn"></div>
+    <ul class="poster-list">
+        <li class="poster-item"><a href="#"><img src="zz.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lj.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="zst.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="fy.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="wrx.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="yly.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="hy.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="yxz.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lsl.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lcw.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="wzx.jpg" width="100%"  height="100%"></a></li>    
+    </ul>
+    <div class="poster-btn poster-next-btn"></div>
 </div>
-	</div>
-	
+
+<script>
+
+$(function(){
+    Carousel.init($(".J_Poster"));
+});
+</script>
+    
+
+
+
+
+
 </div>
+
+
+</div>+      
 </body>
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=fc5dd636598f8aecbf7cf332a44f10e1"></script> 
 <script type="text/javascript">
@@ -570,7 +625,7 @@ var jiathis_config={
         zoom:16,
         center: [106.6455207740,26.3774406535],
         //zoomEnable:false,
-        mapStyle:'dark',
+       // mapStyle:'dark',
         scrollWheel:false,
 
 
@@ -615,19 +670,12 @@ var jiathis_config={
     });
     //启用默认样式测距
     function startRuler1() {
-        ruler2.turnOff();
-        ruler1.turnOn();
+       ruler1.turnOn();
     }
-    //启用自定义样式测距
-    function startRuler2() {
-        ruler1.turnOff();
-       
-    };      
-
+    
       document.getElementById('cl1').onclick=function(){
        javascript:startRuler1();}
-document.getElementById('cl2').onclick=function(){
-       javascript:startRuler2();}
+
 
 
 var marker1_1 = new AMap.Marker({
