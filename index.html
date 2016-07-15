@@ -1,0 +1,1211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DS</title>
+<link rel="stylesheet" href="styles/jquery.fullPage.css"/>
+<link rel="stylesheet" href="styles/reset.css"/>
+<link rel="stylesheet" href="carousel.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="scripts/jquery-1.8.3.min.js"></script>
+<script src="scripts/script.js"></script>
+
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-size:16px;
+}
+
+#page-1{
+    background-image: url(images/home.gif);
+    background-size:cover;
+}
+#page-2{
+    background-image: url(images/2BG.jpg);  
+    position:relative;
+    background-size: cover;
+}   
+#page-3{
+    background-image: url(images/1BG.jpg);
+    background-size:cover;
+}
+
+#page-4{
+    background-image: url(images/2BG.jpg);
+    background-size:cover;
+
+}
+#page-5{
+    background-image: url(images/2BG.jpg);
+    background-size:cover;
+}
+.header{width:1105px;margin:auto;height:100px;padding:0px 0 18px;position:relative;*z-index:1;}
+.header .logo{height:86px;width:256px;margin-top:25px}
+
+.top-nav .navlist-wrap{width:1050px;margin:0 auto;position:relative}
+.top-nav .navlist{position:absolute;right:130PX;top:-40PX}
+.top-nav .navlist .nav-btn{float:left;margin-left:60px;color:#666;vertical-align:middle;text-decoration:none}
+.navlist .nav-btn span{background:url(images/broswer_home.png) no-repeat -29px -145px;display:inline-block;width:16px;height:16px;margin-left:4px;vertical-align:middle;*height:12px;*vertical-align:middle;*cursor:pointer;*letter-spacing:0;*margin-left:0;*background-position:-26px -145px}
+.navlist .btn-active span{background:url(images/broswer_home.png) no-repeat -8px -145px;*background-position:-5px -145px}
+.top-nav .expand{height:0px;background-color:#333d4d;overflow:hidden;position:relative;width:100%}
+.expand .expdiv{height:130px;width:500%;}
+.expand .expdiv .item{float:left;width:20%}
+.expand .expdiv .item-active{display:block}
+.expand .close-btn{width:120px;height:20px;background:url(images/broswer_home.png) no-repeat -13px -117px;position:absolute;left:50%;bottom:-2px;margin-left:-60px;cursor:pointer;}
+.expdiv .expdiv-list{text-align:center;height:56px;padding:37px;color:White}
+.expdiv .expdiv-list .btn{display:inline-block;text-decoration:none;color:#586e91;font-size:18px;line-height:24px;margin:0 28px;cursor:pointer}
+.expdiv .expdiv-list .btn:hover{color:#7896af}
+.expdiv-list .btn .icon{background-repeat:no-repeat;background-image:url(images/broswer_home.png);height:56px;width:56px;float:left}
+.expdiv-list .btn .text{float:left;padding:16px 0 16px 16px}
+.expdiv-list .zj .icon{background-position:-4px 0}
+.expdiv .expdiv-list .zj:hover .icon{background-position:-5px -57px}
+.expdiv .expdiv-list .sjgj .icon{background-position:-58px 0}
+.expdiv .expdiv-list .sjgj:hover .icon{background-position:-59px -58px}
+.expdiv-list .wdj .icon{background-position:-169px -4px}
+.expdiv-list .wdj:hover .icon{background-position:-169px -64px}
+.expdiv-list .jy .icon{background-position:-114px 0}
+.expdiv-list .jy:hover .icon{background-position:-114px -62px}
+.expdiv-list .apple .icon{background-position:-225px -1px;width:38px}
+.expdiv-list .apple:hover .icon{background-position:-225px -58px}
+.expdiv-list .itools .icon{background-position:-270px 0}
+.expdiv-list .itools:hover .icon{background-position:-270px -57px}
+.top-nav .nav-bottom-bg{height:3px;_font-size:1px;background-color:#fff}
+.btm{ margin:30px auto;}
+.btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center;}
+
+#formone {
+	text-align: right;
+	position:absolute;
+	right:0px;
+	top:0px;
+	color:#999999;
+}
+
+
+.home-subjects-v2{
+    height:128px;
+    width:100%;
+    position:absolute;
+    bottom:10;
+
+}
+.home-subjects-v2 ul{
+    width:100%;}
+.home-subjects-v2 li{
+    width:120px;
+    height:128px;
+    float:left;
+    overflow:hidden;
+-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear;
+
+}
+        .home-subjects-v2 li *{-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear}
+        .home-subjects-v2 li a{width:120px;height:128px;display:block;position:relative;cursor:pointer;text-decoration:none;overflow:hidden}
+        .home-subjects-v2 li a:hover{position:absolute}
+        .home-subjects-v2 li a:hover .mask{-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0);opacity:0;-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in}
+        .home-subjects-v2 li img{height:50px;width:117px;position:absolute;bottom:0;right:-13px}
+       
+      
+        .home-subjects-v2 .mask{
+    height:128px;
+    width:120px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+-ms-filter:"alpha(Opacity=0)";  filter:alpha(opacity=0);
+    opacity:0;
+-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in; _display:none!important;
+    background-color: #FFFF00;
+}
+        .home-subjects-v2 .big{width:200px}
+        .home-subjects-v2 .big a{width:200px}
+        .home-subjects-v2 .big img{width:150px;height:115px;right:0;bottom:0}
+        .home-subjects-v2 .big .mask{width:200px}
+        .home-subjects-v2:hover .mask{-ms-filter:"alpha(Opacity=15)";filter:alpha(opacity=15);opacity:.15;-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in}
+
+.slide{
+	font-size:24px;
+	color:#fff;
+	text-align: center;
+}
+#map{
+    color: #000;
+    font-size: 50px;
+}
+ .shitang {
+    height: 300px;
+    width: 100%;
+    }
+
+ .shitang ul{
+list-style:none;
+z-index: 1;
+position: absolute;
+bottom: 15px;
+right: 0px;
+
+}
+
+ .shitang ul li
+{
+float:left;
+background-color:#3d3d3d; 
+}
+
+ .shitang ul li a{
+text-decoration:none;
+display:block;
+height:30px;
+line-height:30px;
+width:100px;
+text-indent:10px;
+color: #fff;
+}
+
+
+.shitang a:hover
+{
+background-color:#4196fc;
+color:#FFF
+}
+
+#qingshi ul{
+    bottom:65px;
+}
+#logo{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+</style>
+
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jquery.fullPage.js"></script>
+<script type="text/javascript" src="scripts/carousel.js"></script>
+<script language="javascript" type="text/javascript">
+    $(function () {
+        //navlist
+        $('#navList').on('click', '.nav-btn', function (event) {
+            if ($(this).hasClass('btn-active')) {
+                $('#expandZone #closeBtn').click();
+                return false;
+            }
+            var curIndex = $(this).index() , mlValue = '-' + curIndex * 100 + '%';
+            if ($('#expandZone').hasClass('active')) {
+                $('#expandZone .expdiv').animate({ marginLeft: mlValue });
+            }
+            else {
+                $('#expandZone .expdiv').css({ marginLeft: mlValue });
+
+                $('#expandZone').animate({ height: '130px' }).addClass('active');
+            }
+            $(this).addClass('btn-active').siblings().removeClass('btn-active');
+            return false;
+        });
+
+        $('#expandZone #closeBtn').on('click', function () {
+            $('#expandZone').animate({ height: '0px' }, function () {
+                $(this).removeClass('active');
+                $('#navList .btn-active').removeClass('btn-active');
+            });
+            return false;
+        });
+    });
+</script>
+
+
+<script>
+$(function(){
+    $('#h5').fullpage({
+        'verticalCentered': false,
+        'css3': true,
+        'sectionsColor': ['#01253D', '#01253C', '#000', '#695684','#000'],
+        anchors: ['page1', 'page2', 'page3', 'page4','page5'],
+        'navigation': true,
+        'navigationPosition': 'right',
+        
+    })
+})</script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+
+<body>
+<div id="h5">
+    <div class="section" id="page-1">
+
+
+
+
+	<div id="logo">
+    <img img src="images/logo.png" width="80%"  height="80%">
+    </div>
+	
+
+
+
+
+	<div id="top">
+ <!-- 代码 开始 -->
+    <div class="wrap">
+        <div class="header">
+        </div>
+        <div class="top-nav">
+            <div id="navList" class="navlist-wrap">
+                <div class="navlist clearfix">
+                    <a href="" class="nav-btn" data-device="#homeItem">首页<span>&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="" class="nav-btn" data-device="#courseItem">数据大厅<span>&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="" class="nav-btn" data-device="#learnItem">分析中心<span>&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="" class="nav-btn" data-device="#personalItem">个人简介<span>&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="" class="nav-btn" data-device="#aboutItem">关于我们<span>&nbsp;&nbsp;&nbsp;</span></a>
+                </div>
+            </div>
+            <div id="expandZone" class="expand">
+                <div class="expdiv">
+                    <div id="homeItem" class="item">
+                        <div class="expdiv-list">
+                            <a href="#" class="btn zj" id="download-link"><span class="icon"></span>
+                                <span class="text">主页</span></a>
+                        </div>
+                    </div>
+                    <div id="courseItem" class="item">
+                        <div class="expdiv-list">
+                        <a href="#page2" class="btn zj" id="A4"><span class="icon"></span>
+                                <span class="text">图书馆数据</span></a>
+                                <a href="#page4" class="btn zj" id="A5"><span class="icon"></span>
+                                <span class="text">食堂数据</span></a>
+                        </div>
+                    </div>
+                    <div id="learnItem" class="item">
+                        <div class="expdiv-list">
+                           <a href="#page2"  class="btn zj" id="A1"><span class="icon"></span>
+                                <span class="text">图书馆数据分析</span></a>
+                                <a href="#page4" class="btn zj" id="A2"><span class="icon"></span>
+                                <span class="text">食堂数据分析</span></a>
+                        </div>
+                    </div>
+                    <div id="personalItem" class="item">
+                        <div class="expdiv-list">
+                           <a href="#page5"  class="btn zj" id="A1"><span class="icon"></span>
+                                <span class="text">不虚小组个人信息</span></a>
+                        </div>
+                    </div>
+                    <div id="aboutItem" class="item">
+                        <div class="expdiv-list">
+                            贵州省“电子商务技术与安全”特色重点实验室&copy;copyright</br>
+							Guizhou Province Key & Special Laboratory of "Technology & Security of E-Business"&copy;copyright
+                        </div>
+                    </div>
+                </div>
+                <div id="closeBtn" class="close-btn">
+                </div>
+            </div>
+            <div class="nav-bottom-bg">
+            </div>
+        </div>
+    </div>
+    <!-- 代码 结束 -->
+	
+  <div id="formone">
+  <form> 
+      <label for="search">Search:</label>
+      <input type="text"  name="search" id="search" value="" />   
+      <input type="submit" value="确定"  name="submit" />
+      <input type="reset" value="重置" name="reset" />
+</form> 
+</div>
+
+
+
+  </div>
+	
+	
+	
+	
+	</div>
+    <div class="section" id="page-2">
+    <div class="slide">
+	
+	
+	
+	<div id="subject" class="home-subjects-v2">
+    <ul>
+        <li>
+            <a>
+                <img src="images/1.jpg">
+                <div class="info">
+                <h3 style="color:#f62368"></h3>
+              
+               
+                </div>
+               
+                <i class="mask"></i>
+            </a>
+        </li>
+        <li class="big">
+            <a>
+                <img src="images/2.jpg">
+                <div class="info">
+                <h3 style="color:#ff578a"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <img src="images/3.jpg">
+                <div class="info">
+                <h3 style="color:#6d3fa7"></h3>
+             
+                </div>
+                 <i class="mask"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <img src="images/4.jpg">
+                <div class="info">
+                <h3 style="color:#d61939"></h3>
+                
+                </div>
+               <i class="mask"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+           <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+           <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+           <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+           <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+           <li>
+            <a>
+                <img src="images/5.jpg">
+                <div class="info">
+                <h3 style="color:#6f9400"></h3>
+              
+                </div>
+                <i class="mask"></i>
+            </a>
+        </li>
+
+    </ul>
+    </div>
+	
+    <script type="text/javascript">
+        function mouseover(e){
+            var list = $('#subject li');
+            var target = $(e.target).parents('li');
+
+            list.removeClass('big');
+            target.addClass('big');
+        }
+
+        (function(){
+            var outer = $('#subject');
+            outer.find('li').on('mouseover', mouseover);
+        })()
+        
+    </script>
+
+
+	</div>
+	
+	
+	
+	
+	
+
+        <div class="slide">第二屏的第二屏</div>
+        <div class="slide">第二屏的第三屏</div>
+        <div class="slide">第二屏的第四屏</div>
+        <div class="slide">第二屏的第五屏</div>
+        <div class="slide">第二屏的第六屏</div>
+    </div>
+
+    <div class="section" id="page-3">
+	<div class="box">
+		<div class="link mission-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="嘿嘿嘿嘿嘿嘿">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			早中晚
+			</a>
+		</div>
+		<div class="link play-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="哈哈哈哈哈哈哈">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			均值消费
+			</a>
+		</div>
+		<div class="link touch-link">
+			<span class="icon animated"></span>
+			<a class="button" data-title="呵呵呵呵呵呵">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			比值
+			</a>
+		</div>
+		<p class="tip"><em></em><span></span></p>
+	</div>
+    </div>
+
+
+
+    <div class="section" id="page-4">
+        <div class="slide" id="map">
+        <div class="shitang">
+        <ul>
+        <li id="yst"><a href="#">一食堂</a></li>
+        <li id="st2"><a href="#">二食堂</a></li>
+        <li id="st3"><a href="#">三食堂</a></li>
+        <li id="st4"><a href="#">四食堂</a></li>
+        <li id="yc"><a href="#">隐藏</a></li>
+        </ul>
+
+         <div class="shitang" id="qingshi">
+         <ul>
+        <li id="czy"><a href="#">翠竹苑</a></li>
+        <li id="dgy"><a href="#">丹桂苑</a></li>
+        <li id="yly"><a href="#">玉兰苑</a></li>
+        <li id="yhy"><a href="#">樱花苑</a></li>
+        <li id="yc2"><a href="#">隐藏</a></li>
+        </ul>
+        </div>
+        </div>
+        <div id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</div>
+<div id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</div>
+ <div id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</div>
+
+        </div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div>
+        <div class="slide">第三屏的第五屏</div>
+        <div class="slide">第三屏的第六屏</div>
+    </div>
+
+
+
+
+
+
+
+
+<div class="section" id="page-5">
+
+    
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+    siteNum:15,
+    sm:"msn,fb,twitter,googleplus,yixin,kaixin001,email,fav,cqq,feixin,douban,tieba,copy,ujian,ishare",
+    summary:"",
+    boldNum:6,
+    shortUrl:false,
+    hideMore:true
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    <p style="height:175px;"></p>
+    <div class="J_Poster poster-main" data-setting='{
+            "width":1380,
+            "height":295,
+            "posterWidth":699,
+            "posterHeight":295,
+            "scale":0.8,
+            "autoPlay":true,
+            "delay":2000,
+            "speed":300
+            }'>
+    <div class="poster-btn poster-prev-btn"></div>
+    <ul class="poster-list">
+        <li class="poster-item"><a href="#"><img src="zz.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lj.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="zst.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="fy.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="wrx.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="yly.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="hy.jpg"  width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="yxz.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lsl.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="lcw.jpg" width="100%"  height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="wzx.jpg" width="100%"  height="100%"></a></li>    
+    </ul>
+    <div class="poster-btn poster-next-btn"></div>
+</div>
+
+<script>
+
+$(function(){
+    Carousel.init($(".J_Poster"));
+});
+</script>
+    
+
+
+
+
+
+</div>
+
+
+</div>+      
+</body>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=fc5dd636598f8aecbf7cf332a44f10e1"></script> 
+<script type="text/javascript">
+	     (function(){
+    var map = new AMap.Map('map',{
+        zoom:16,
+        center: [106.6455207740,26.3774406535],
+        //zoomEnable:false,
+       // mapStyle:'dark',
+        scrollWheel:false,
+
+
+    });      
+    document.getElementById('zoomin').onclick=function(){
+        map.zoomIn();
+    };
+    document.getElementById('zoomout').onclick=function(){
+        map.zoomOut();
+    };
+
+
+
+
+  
+     map.plugin(["AMap.RangingTool"], function() {
+        ruler1 = new AMap.RangingTool(map);
+        AMap.event.addListener(ruler1, "end", function(e) {
+            ruler1.turnOff();
+        });
+        var sMarker = {
+            icon: new AMap.Icon({
+                size: new AMap.Size(19, 31),//图标大小
+                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png"
+            })
+        };
+        var eMarker = {
+            icon: new AMap.Icon({
+                size: new AMap.Size(19, 31),//图标大小
+                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b2.png"
+            }),
+            offset: new AMap.Pixel(-9, -31)
+        };
+        var lOptions = {
+            strokeStyle: "solid",
+            strokeColor: "#FF33FF",
+            strokeOpacity: 1,
+            strokeWeight: 2
+        };
+        var rulerOptions = {startMarkerOptions: sMarker, endMarkerOptions: eMarker, lineOptions: lOptions};
+        ruler2 = new AMap.RangingTool(map, rulerOptions);
+    });
+    //启用默认样式测距
+    function startRuler1() {
+       ruler1.turnOn();
+    }
+    
+      document.getElementById('cl1').onclick=function(){
+       javascript:startRuler1();}
+
+
+
+var marker1_1 = new AMap.Marker({
+        position: [106.641007,26.371704],
+    });
+    marker1_1.setMap(map);
+    marker1_1.setTitle('翠竹苑1栋');
+    marker1_1.hide();
+    // 设置label标签
+    marker1_1.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "翠竹苑1栋" });
+   
+
+    var marker1_2 = new AMap.Marker({
+        position: [106.641158,26.37255],
+    });
+    marker1_2.setMap(map);
+    marker1_2.setTitle('翠竹苑2栋 ');
+    marker1_2.hide();
+    // 设置label标签
+    marker1_2.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "翠竹苑2栋"
+      });
+
+
+
+    var marker1_3 = new AMap.Marker({
+        position: [106.640782,26.374347],
+    });
+    marker1_3.setMap(map);
+    marker1_3.setTitle('翠竹苑3栋 ');
+    marker1_3.hide();
+// 设置label标签
+    marker1_3.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "翠竹苑3栋"
+      });
+
+
+
+
+    var marker2_4 = new AMap.Marker({
+        position: [106.642886,26.383043],
+    });
+    marker2_4.setMap(map);
+    marker2_4.setTitle('丹桂苑4栋 ');
+    marker2_4.hide();
+
+    // 设置label标签
+    marker2_4.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "丹桂苑4栋"
+      });
+
+
+
+    var marker2_1 = new AMap.Marker({
+        position: [106.643857,26.382462],
+    });
+    marker2_1.setMap(map);
+    marker2_1.setTitle('丹桂苑1栋 ');
+    marker2_1.hide();
+
+    // 设置label标签
+    marker2_1.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "丹桂苑1栋"
+      });
+
+
+
+    var marker2_2 = new AMap.Marker({
+        position: [106.644637,26.383504],
+    });
+    marker2_2.setMap(map);
+    marker2_2.setTitle('丹桂苑2栋 ');
+    marker2_2.hide();
+
+    // 设置label标签
+    marker2_2.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "丹桂苑2栋"
+      });
+
+
+
+    var marker2_3 = new AMap.Marker({
+        position: [106.641783,26.382889],
+    });
+    marker2_3.setMap(map);
+    marker2_3.setTitle('丹桂苑3栋 ');
+    marker2_3.hide();
+
+    // 设置label标签
+    marker2_3.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "丹桂苑3栋"
+      });
+
+
+
+
+    var marker3_1 = new AMap.Marker({
+        position: [106.646354,26.383898],
+    });
+    marker3_1.setMap(map);
+    marker3_1.setTitle('玉兰苑1栋 ');
+    marker3_1.hide();
+
+    // 设置label标签
+    marker3_1.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "玉兰苑1栋"
+      });
+
+
+    var marker3_2 = new AMap.Marker({
+        position: [106.647033,26.383413],
+    });
+    marker3_2.setMap(map);
+    marker3_2.setTitle('玉兰苑2栋 ');
+    marker3_2.hide();
+
+    // 设置label标签
+    marker3_2.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "玉兰苑2栋"
+      });
+
+
+
+    var marker3_3 = new AMap.Marker({
+        position: [106.64567,26.382952],
+    });
+    marker3_3.setMap(map);
+    marker3_3.setTitle('玉兰苑3栋 ');
+    marker3_3.hide();
+
+    // 设置label标签
+    marker3_3.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "玉兰苑3栋"
+      });
+
+
+
+    var marker3_4 = new AMap.Marker({
+        position: [106.646603,26.382394],
+    });
+    marker3_4.setMap(map);
+    marker3_4.setTitle('玉兰苑4栋 ');
+    marker3_4.hide();
+
+    // 设置label标签
+    marker3_4.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "玉兰苑4栋"
+      });
+
+
+    var marker3_5 = new AMap.Marker({
+        position: [106.644951,26.382029],
+    });
+    marker3_5.setMap(map);
+    marker3_5.setTitle('玉兰苑5栋 ');
+    marker3_5.hide();
+
+    // 设置label标签
+    marker3_5.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "玉兰苑5栋"
+      });
+
+
+    var marker4_2 = new AMap.Marker({
+        position: [106.643958,26.373819],
+    });
+    marker4_2.setMap(map);
+    marker4_2.setTitle('樱花苑2栋 ');
+    marker4_2.hide();
+
+    // 设置label标签
+    marker4_2.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "樱花苑2栋"
+      });
+
+
+
+    var marker4_1 = new AMap.Marker({
+        position: [106.643078,26.373838],
+    });
+    marker4_1.setMap(map);
+    marker4_1.setTitle('樱花苑1栋 ');
+    marker4_1.hide();
+
+    // 设置label标签
+    marker4_1.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "樱花苑1栋"
+      });
+    
+
+
+    var marker4_3 = new AMap.Marker({
+        position: [106.642896,26.372752],
+    });
+    marker4_3.setMap(map);
+    marker4_3.setTitle('樱花苑3栋 ');
+    marker4_3.hide();
+
+    // 设置label标签
+    marker4_3.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "樱花苑3栋"
+      });
+    
+
+
+    var marker4_4 = new AMap.Marker({
+        position: [106.643872,26.373203],
+    });
+    marker4_4.setMap(map);
+    marker4_4.setTitle('樱花苑4栋 ');
+    marker4_4.hide();
+
+    // 设置label标签
+    marker4_4.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "樱花苑4栋"
+      });
+
+var marker5_1 = new AMap.Marker({
+        position: [106.641829,26.371088],
+    });
+    marker5_1.setMap(map);
+    // 
+    
+    marker5_1.setTitle('一食堂');
+    marker5_1.hide();
+    marker5_1.setAnimation('AMAP_ANIMATION_BOUNCE');
+    // 设置label标签
+    marker5_1.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "一食堂"
+      });
+
+
+
+
+    var marker5_2 = new AMap.Marker({
+        position: [106.642112,26.37427],
+    });
+    marker5_2.setMap(map);
+    // 
+    marker5_2.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_2.setTitle('二食堂 ');
+    marker5_2.hide();
+
+    // 设置label标签
+    marker5_2.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "二食堂"
+      });
+
+
+
+    var marker5_3 = new AMap.Marker({
+        position: [106.642709,26.382269],
+    });
+    marker5_3.setMap(map);
+    // 
+    marker5_3.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_3.setTitle('三食堂 ');
+    marker5_3.hide();
+
+    // 设置label标签
+    marker5_3.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "三食堂"
+      });
+
+
+    var marker5_4 = new AMap.Marker({
+        position: [106.644938,26.384215],
+    });
+    marker5_4.setMap(map);
+    // 
+    marker5_4.setAnimation('AMAP_ANIMATION_BOUNCE');
+    marker5_4.setTitle('四食堂 ');
+    marker5_4.hide();
+    // 设置label标签
+    marker5_4.setLabel({
+        offset: new AMap.Pixel(20, 20),//
+        content: "四食堂"
+      });
+
+
+
+
+
+        map.plugin(['AMap.Heatmap'],function(){
+        //center: [106.6455207740,26.3774406535],
+            var heatmap1= new AMap.Heatmap(map);
+            var points=[
+            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
+            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
+            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
+            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
+            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
+            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                 ];
+            heatmap1.setDataSet({
+                data:points
+            });
+            heatmap1.hide(),
+            heatmap1.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap1.setOptions({
+            radius:80,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    });
+
+            //show dgy
+         document.getElementById('czy').onclick=function(){
+    marker1_1.show() || marker1_2.show() || marker1_3.show()};
+
+         document.getElementById('dgy').onclick=function(){
+    marker2_1.show() || marker2_2.show() || marker2_3.show() || marker2_4.show()};
+
+         document.getElementById('yly').onclick=function(){
+    marker3_1.show() || marker3_2.show() || marker3_3.show() || marker3_4.show() || marker3_5.show()};
+
+         document.getElementById('yhy').onclick=function(){
+    marker4_1.show() || marker4_2.show() || marker4_3.show() || marker4_4.show()};
+
+   document.getElementById('yc2').onclick=function(){
+                 marker1_1.hide() || marker1_2.hide() || marker1_3.hide() || marker2_1.hide() || marker2_2.hide() || marker2_3.hide() || marker2_4.hide() || marker3_1.hide() || marker3_2.hide() || marker3_3.hide() || marker3_4.hide() || marker3_5.hide() || marker4_1.hide() || marker4_2.hide() || marker4_3.hide() || marker4_4.hide() };
+
+
+
+
+
+
+
+       document.getElementById('yst').onclick=function(){
+        heatmap1.show() || marker5_1.show()
+
+    };    document.getElementById('yc').onclick=function(){
+                heatmap1.hide() || heatmap2.hide() || heatmap3.hide() || heatmap4.hide() || marker5_1.hide() || marker5_2.hide() || marker5_3.hide() || marker5_4.hide()
+            };
+
+
+            
+            //heatmap.hide();
+    //isHotspot:true
+
+    
+    
+
+
+        
+        //center: [106.6455207740,26.3774406535],
+            var heatmap2= new AMap.Heatmap(map);
+            var points=[
+            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
+            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
+            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
+            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
+            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
+            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                 ];
+            heatmap2.setDataSet({
+                data:points
+            });
+               heatmap2.hide(),
+            heatmap2.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap2.setOptions({
+            radius:80,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    }); 
+
+           document.getElementById('st2').onclick=function(){
+        heatmap2.show() || marker5_2.show()
+
+    };
+            
+            //heatmap.hide();
+    //isHotspot:true
+
+    
+   
+
+
+
+
+
+
+        
+        //center: [106.6455207740,26.3774406535],
+            var heatmap3= new AMap.Heatmap(map);
+            var points=[
+            {"lng":106.641008,"lat":26.371704,"count":10000},//翠1
+            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
+            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
+            {"lng":106.64567 ,"lat":26.382952,"count":16},//玉3
+            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
+            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
+            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                 ];
+            heatmap3.setDataSet({
+                data:points
+            });   heatmap3.hide(),
+            heatmap3.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap3.setOptions({
+            radius:80,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    }); 
+
+   document.getElementById('st3').onclick=function(){
+        heatmap3.show() || marker5_3.show()
+
+    };  
+            
+            //heatmap.hide();
+    //isHotspot:true
+
+    
+    
+
+
+
+      
+        //center: [106.6455207740,26.3774406535],
+            var heatmap4= new AMap.Heatmap(map);
+            var points=[
+            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
+            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
+            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
+            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
+            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
+            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                 ];
+            heatmap4.setDataSet({
+                data:points
+            });heatmap4.hide(),
+            heatmap4.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap4.setOptions({
+            radius:80,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    }); 
+
+  document.getElementById('st4').onclick=function(){
+        heatmap4.show() || marker5_4.show()
+
+    };  
+           
+            //heatmap.hide();
+    //isHotspot:true
+
+    
+    })
+
+
+ })()   
+
+    
+</script>
+</html>
