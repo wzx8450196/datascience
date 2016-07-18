@@ -25,6 +25,7 @@ font-size:16px;
     background-image: url(images/2BG.jpg);  
     position:relative;
     background-size: cover;
+
 }   
 #page-3{
     background-image: url(images/1BG.jpg);
@@ -45,7 +46,7 @@ font-size:16px;
 
 .top-nav .navlist-wrap{width:1050px;margin:0 auto;position:relative}
 .top-nav .navlist{position:absolute;right:130PX;top:-40PX}
-.top-nav .navlist .nav-btn{float:left;margin-left:60px;color:#666;vertical-align:middle;text-decoration:none}
+.top-nav .navlist .nav-btn{float:left;margin-left:60px;color:#000;vertical-align:middle;text-decoration:none;font-weight:bold;}
 .navlist .nav-btn span{background:url(images/broswer_home.png) no-repeat -29px -145px;display:inline-block;width:16px;height:16px;margin-left:4px;vertical-align:middle;*height:12px;*vertical-align:middle;*cursor:pointer;*letter-spacing:0;*margin-left:0;*background-position:-26px -145px}
 .navlist .btn-active span{background:url(images/broswer_home.png) no-repeat -8px -145px;*background-position:-5px -145px}
 .top-nav .expand{height:0px;background-color:#333d4d;overflow:hidden;position:relative;width:100%}
@@ -74,8 +75,6 @@ font-size:16px;
 .btm{ margin:30px auto;}
 .btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center;}
 
-
-
 .home-subjects-v2{
     height:128px;
     width:100%;
@@ -85,12 +84,17 @@ font-size:16px;
 }
 .home-subjects-v2 ul{
     width:100%;}
+
 .home-subjects-v2 li{
     width:120px;
     height:128px;
     float:left;
     overflow:hidden;
--webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear;
+    -webkit-transition:all .1s linear;
+    -moz-transition:all .1s linear;
+    -o-transition:all .1s linear;
+    -ms-transition:all .1s linear;
+    transition:all .1s linear;
 
 }
         .home-subjects-v2 li *{-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear}
@@ -107,9 +111,9 @@ font-size:16px;
     position:absolute;
     top:0;
     left:0;
--ms-filter:"alpha(Opacity=0)";  filter:alpha(opacity=0);
+    -ms-filter:"alpha(Opacity=0)";  filter:alpha(opacity=0);
     opacity:0;
--webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in; _display:none!important;
+    -webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in; _display:none!important;
     background-color: #FFFF00;
 }
         .home-subjects-v2 .big{width:200px}
@@ -172,6 +176,147 @@ color:#FFF
     top: 5px;
     left: 5px;
 }
+.slider .main .main-i,  
+    .slider .main,
+    .slider{width: 100%;
+                height:400px;
+                position: relative;
+                text-align:  center;
+                margin: 0 auto;
+        }
+    .slider .main{
+                      overflow: hidden;
+        }
+        .slider .main .main-i{
+
+        }
+        .slider .main .main-i img{width: 600px;
+                              position: absolute;
+                              left: 0;
+                              right: 0;
+                              text-align:  center;
+                               margin: 0 auto;
+                              z-index: 1;
+        }
+        .slider .main .main-i .caption{position: absolute;
+                              top: 30%;
+                              right:50%;
+                              z-index: 9;
+                          }
+        .slider .main .main-i .caption h2{font-size: 30px;
+                                          line-height: 60px;
+                                          color: #fffff0;
+                                          text-align:  right;
+                                     
+
+        }
+        .slider .main .main-i .caption h3{font-size: 50px;
+                                          line-height: 70px;
+                                          color: #fff;
+                                          text-align: right;
+                                     
+                                          font-family: 'open sans condensed';
+                                      } 
+   /*控制区域*/
+   .slider .ctrl{
+    width:100%;
+    height:13px;
+    line-height: 13px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom:-13px;
+    background-color: #dfdfdf;
+   }
+   .slider .ctrl .ctrl-i{
+    display: inline-block;
+    width: 150px;
+    height: 13px;
+    background-color: #666;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    position: relative;
+    margin-left: 1px;
+   }
+   .slider .ctrl .ctrl-i img{
+    width:100%;
+    position: absolute;
+    left:0;
+    bottom:50px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all .2s;
+   }
+   /*hover 到控制按钮的样式*/
+   .slider .ctrl .ctrl-i:hover{
+    background-color: #f0f0f0;
+    z-index: 2;
+   }
+   .slider .ctrl .ctrl-i:hover img{
+    bottom:13px;
+    -webkit-box-reflect: below 0px -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(transparent),
+    color-stop(50%,transparent),
+    to(rgba(255,255,255,.3))
+    );
+    opacity: 1;
+   }
+   /*active 当前展现的状态 */
+   .slider .ctrl .ctrl-i_active:hover,
+   .slider .ctrl .ctrl-i_active{
+    background-color: #000;
+   }
+   .slider .ctrl .ctrl-i_active:hover img{
+    opacity: 0;
+   }
+   /*幻灯片切换的样式*/
+   .slider .main .main-i{
+    opacity: 0;
+    position: absolute;
+    right: 50%;
+    top:0;
+    -webkit-transition: all .5s;
+    z-index: 2;
+   }
+   
+   .slider .main .main-i h2{
+    margin-right: 300px;
+   }
+   .slider .main .main-i h3{
+    margin-right: -300px;
+   }
+   .slider .main .main-i h2,
+   .slider .main .main-i h3{
+    opacity: 0;
+    -webkit-transition: all 1s .8s;
+   }
+   #main_background,
+   .slider .main .main-i_active{
+    right:0;
+    opacity: 1;
+    z-index: 2;
+   }
+   #main_background{
+    z-index:1;
+   }
+   .slider .main .main-i_active h2,
+   .slider .main .main-i_active h3{
+    margin-right:0px;
+    opacity: 1;
+   }
+   .slider .main .main-i .caption{
+    margin-right: 5%;
+   }
+   #page21{
+    padding: 100px 0px;
+            
+            font-size:14px ;
+            font-family:'Avenir Next' ;
+            color:#555;
+            -webkit-font-smoonthing:antialiased;
+   }
 </style>
 
 
@@ -219,7 +364,7 @@ $(function(){
         anchors: ['page1', 'page2', 'page3', 'page4','page5'],
         'navigation': true,
         'navigationPosition': 'right',
-        
+       
     })
 })</script>
 <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
@@ -304,6 +449,7 @@ $(function(){
 
 
 
+
   </div>
 	
 	
@@ -311,11 +457,125 @@ $(function(){
 	
 	</div>
     <div class="section" id="page-2">
-    <div class="slide">
+    <div class="slide" id="page21">
+    <div class="slider">
+	<div class="main" id="template_main">
+         <div class="main-i main-i_active" id="main_{{index}}">
+            <div class="caption">
+                <h2>{{h2}}</h2>
+                <h3>{{h3}}</h3>
+            </div>
+            <img src="images/{{index}}.jpg"/>
+         </div>
+       </div>
+       <div class="ctrl" id="template_ctrl">
+         <a class="ctrl-i ctrl-i_active" id="ctrl_{{index}}" href="javascript:switchSlider({{index}});"><img src="images/{{index}}.jpg" class="picture"/></a>
+       </div>
+    <script type="text/javascript">
+  /*1.定义数据*/
+  var data = [
+  {img:11,h2:'DATA SCIENCE',h3:'社交'},
+  {img:22,h2:'DATA SCIENCE',h3:'数据分析'},
+  {img:33,h2:'DATA SCIENCE',h3:'数据关联'},
+  {img:44,h2:'DATA SCIENCE',h3:'数据展示'},
+ 
+  ];
+  /*2g通用函数--获取DOM*/
+  var g = function(id){
+   if(id.substr(0,1)=='.'){
+    return document.getElementsByClassName(id.substr(1));
+   }
+   return document.getElementById(id);
+  }
+  /*3添加幻灯片的操作（所有的幻灯片&所有的按钮 ）*/
+  function addSliders(){
+   //3.1获取模板
+    var tpl_main = g('template_main').innerHTML
+        .replace(/^\s*/,'')
+        .replace(/\s*$/,'');
+    var tpl_ctrl = g('template_ctrl').innerHTML
+        .replace(/^\s*/,'')
+        .replace(/\s*$/,'');
+   //3.2定义最终输出HTML的变量
+   var out_main = [];
+   var out_ctrl = [];
+   //3.3遍历所有的数据，构建最终输出的HTML
+   for( i in data){
+    var _html_main = tpl_main
+      .replace(/{{index}}/g,data[i].img)
+      .replace(/{{h2}}/g,data[i].h2)
+      .replace(/{{h3}}/g,data[i].h3)
+      .replace(/{{css}}/g,['','main-i_right'][i%2]);   //随机的添加main-i_right样式
+    var _html_ctrl = tpl_ctrl
+      .replace(/{{index}}/g,data[i].img);
+     
+      out_main.push(_html_main);
+      out_ctrl.push(_html_ctrl);
+   }
+   //3.4把HTML 回写到对应的DOM里面
+   g('template_main').innerHTML = out_main.join('');
+   g('template_ctrl').innerHTML = out_ctrl.join('');
+   //7增加#main_background
+   g('template_main').innerHTML += tpl_main
+      .replace(/{{index}}/g,'{{index}}')
+      .replace(/{{h2}}/g,data[i].h2)
+      .replace(/{{h3}}/g,data[i].h3);
+      g('main_{{index}}').id = 'main_background';
+  }
+   //5 幻灯片切换
+   function switchSlider(n){
+    //5.1获取要展现的幻灯片&控制按钮 DOM
+    var main = g('main_'+n);
+    var ctrl = g('ctrl_'+n);
+   
+    //5.2获取所有的幻灯片以及控制按钮
+    var clear_main = g('.main-i');
+    var clear_ctrl = g('.ctrl-i');
+    //5.3清楚他们的active样式
+    for(i = 0 ;i < clear_ctrl.length; i++){
+     clear_main[i].className = clear_main[i].className
+                  .replace('main-i_active','');
+     clear_ctrl[i].className = clear_ctrl[i].className
+                  .replace('ctrl-i_active','');
+    }
+    //5.4为当前的控制按钮和幻灯片添加样式
+    main.className += ' main-i_active';
+    ctrl.className += ' ctrl-i_active';
+    //7.2切换时，复制上一张幻灯片到main_background 中
+    setTimeout(function(){
+     g('main_background').innerHTML = main.innerHTML;
+    },1000)
+   }
+   //6 动态调整图片的 margin-top 以使其2垂直居中
+   function movePictures(){
+    var pictures = g('.picture');
+    for(i = 0 ; i< pictures.length;i++){
+     pictures[i].style.marginTop = (-1*pictures[i].clientHeight/2)+'px';
+    }
+   }
+   
+   //4 定义何时处理幻灯片输出
+   window.onload = function(){
+    addSliders();
+    switchSlider(2);
+    setTimeout(function(){
+     movePictures();
+    },100)
+   }
+ </script>
+	
+	
+	</div>
+
+	</div>
 	
 	
 	
-	<div id="subject" class="home-subjects-v2">
+	
+	
+
+        <div class="slide">
+            <div id="subject" class="home-subjects-v2">
     <ul>
         <li>
             <a>
@@ -422,7 +682,7 @@ $(function(){
 
     </ul>
     </div>
-	
+    
     <script type="text/javascript">
         function mouseover(e){
             var list = $('#subject li');
@@ -440,14 +700,7 @@ $(function(){
     </script>
 
 
-	</div>
-	
-	
-	
-	
-	
-
-        <div class="slide">第二屏的第二屏</div>
+        第二屏的第二屏</div>
         <div class="slide">第二屏的第三屏</div>
         <div class="slide">第二屏的第四屏</div>
         <div class="slide">第二屏的第五屏</div>
