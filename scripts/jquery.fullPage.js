@@ -151,7 +151,7 @@
 
             //design
             controlArrows: true,
-            controlArrowColor: '#fff',
+            controlArrowColor: '#272822',
             verticalCentered: true,
             sectionsColor : [],
             paddingTop: 0,
