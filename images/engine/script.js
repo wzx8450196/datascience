@@ -77,7 +77,9 @@ function ws_blinds(t,i,e){function n(i,e,n,o,s){t.support.transform&&t.support.t
 	};
 	*/
 
-	var wowSlider = $("#wowslider-container").wowSlider({effect: effects || "blinds",prev:"",next:"",fallback:ws_blinds,duration:duration,delay:delay,width:960,height:350,fullScreen:true,autoPlay:true,autoPlayVideo:false,stopOnHover:false,loop:false,bullets:true,caption:true,captionEffect:"move",controls:true});
+	var wowSlider = $("#wowslider-container").wowSlider({effect: effects || "blinds",prev:"",next:"",
+		fallback:ws_blinds,duration:duration,delay:delay,width:960,height:350,
+		fullScreen:true,autoPlay:true,stopOnHover:true,autoPlayVideo:false,loop:false,bullets:true,caption:true,captionEffect:"move",controls:true});
 
 	// change slider size
 	var sliderCont = $('.slideshow > .holder'),
