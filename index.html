@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/allstyle.css">
 <link rel="stylesheet" type="text/css" href="images/engine/style.css" media="screen" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+
+<!-- 食堂 -->
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel='stylesheet prefetch' href='http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <script type="text/javascript" src="images/engine/jquery.js"></script>
 <script src="scripts/jquery-1.8.3.min.js"></script>
 <script src="scripts/script.js"></script>
@@ -18,12 +24,15 @@ margin:0;
 padding:0;
 font-size:16px;
 font-family:微软雅黑;
+font-color: blue;
 }
 
-
+.page-3 a {
+  font-size: 30px;
+}
 
 #page-1{
-    background-image: url(images/home.gif);
+    background-image: url(images/背景.jpg);
     background-size:cover;
 }
 #page-2{
@@ -45,6 +54,7 @@ font-family:微软雅黑;
 #page-5{
     background-image: url(images/2BG.jpg);
     background-size:cover;
+    position: relative;
 }
 
 
@@ -52,21 +62,17 @@ font-family:微软雅黑;
 .inner{ width: 800px; height: 50px;margin-left:100%; }
 #logo{ float: left;left: 0px;position: absolute;margin-left: 10px; }
 .inner nav{ float:left; }
-.inner nav .menu {margin-left: -565px;}
-.inner nav .menu li{ float: left;list-style-type:none; }
-.inner nav .menu li a{ display: block;  padding: 0 20px; line-height: 50px; cursor:pointer; color: #ffffff;text-decoration-style: none;}
-.inner nav .menu li a:hover,.inner nav .menu li.active a{ background: #4196fc; color: #fff;}
+.inner nav .menu1 {margin-left: -565px;}
+.inner nav .menu1 li{ float: left;list-style-type:none; }
+.inner nav .menu1 li a{ display: block;  padding: 0 20px; line-height: 50px; cursor:pointer; color: #ffffff;text-decoration-style: none;}
+.inner nav .menu1 li a:hover{ background: #4196fc; color: #fff;}
 
 
-.slide{
-	font-size:24px;
-	color:#fff;
-	text-align: center;
-}
 
 #map{
     color: #000;
     font-size: 50px;
+     text-align:center;
 }
 
 .shitang {
@@ -109,140 +115,8 @@ font-family:微软雅黑;
     bottom:65px;
 }
 
-.slider .main .main-i,  
-.slider .main,
-.slider{
-    width: 100%;
-    height:400px;
-    position: relative;
-    text-align:  center;
-    margin: 0 auto;
-}
 
-.slider .main{
-    overflow: hidden;
-}
-.slider .main .main-i{
 
-}
-.slider .main .main-i img{width: 600px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align:  center;
-    margin: 0 auto;
-    z-index: 1;
-}
-.slider .main .main-i .caption{position: absolute;
-    top: 30%;
-    right:50%;
-    z-index: 9;
-}
-.slider .main .main-i .caption h2{font-size: 30px;
-    line-height: 60px;
-    color: #fffff0;
-    text-align:  right;
-}
-.slider .main .main-i .caption h3{
-    font-size: 50px;
-    line-height: 70px;
-    color: #fff;
-    text-align: right;
-
-font-family: 'open sans condensed';
-} 
-   /*控制区域*/
-.slider .ctrl{
-    width:100%;
-    height:13px;
-    line-height: 13px;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom:-13px;
-    background-color: #dfdfdf;
-}
-.slider .ctrl .ctrl-i{
-    display: inline-block;
-    width: 150px;
-    height: 13px;
-    background-color: #666;
-    box-shadow: 0 1px 1px rgba(0,0,0,.3);
-    position: relative;
-    margin-left: 1px;
-}
-.slider .ctrl .ctrl-i img{
-    width:100%;
-    position: absolute;
-    left:0;
-    bottom:50px;
-    z-index: 1;
-    opacity: 0;
-    -webkit-transition: all .2s;
-}
-   /*hover 到控制按钮的样式*/
-.slider .ctrl .ctrl-i:hover{
-    background-color: #f0f0f0;
-    z-index: 2;
-}
-.slider .ctrl .ctrl-i:hover img{
-    bottom:13px;
-    -webkit-box-reflect: below 0px -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    from(transparent),
-    color-stop(50%,transparent),
-    to(rgba(255,255,255,.3))
-    );
-    opacity: 1;
-}
-   /*active 当前展现的状态 */
-.slider .ctrl .ctrl-i_active:hover,
-.slider .ctrl .ctrl-i_active{
-background-color: #000;
-}
-.slider .ctrl .ctrl-i_active:hover img{
-opacity: 0;
-}
-/*幻灯片切换的样式*/
-.slider .main .main-i{
-opacity: 0;
-position: absolute;
-right: 50%;
-top:0;
--webkit-transition: all .5s;
-z-index: 2;
-}
-
-.slider .main .main-i h2{
-  margin-right: 300px;
-}
-.slider .main .main-i h3{
-  margin-right: -300px;
-}
-.slider .main .main-i h2,
-.slider .main .main-i h3{
-    opacity: 0;
-    -webkit-transition: all 1s .8s;
-}
-#main_background,
-.slider .main .main-i_active{
-    right:0;
-    opacity: 1;
-    z-index: 2;
-}
-#main_background{
-    z-index:1;
-}
-.slider .main .main-i_active h2,
-.slider .main .main-i_active h3{
-    margin-right:0px;
-    opacity: 1;
-}
-.slider .main .main-i .caption{
-    margin-right: 5%;
-}
 #page21{
     padding: 100px 0px;
     font-size:14px ;
@@ -254,10 +128,17 @@ z-index: 2;
    position:absolute;   
    left:40%;   
    top:40%;   
+<<<<<<< HEAD
+   border:3px solid #272822; 
+   padding:10px;   
+   font:bold 14px verdana,tahoma,helvetica;   
+   color:#272822;   
+=======
    border:3px solid #131b28; 
    padding:10px;   
    font:bold 14px verdana,tahoma,helvetica;   
    color:#131b28;   
+>>>>>>> origin/master
    width:280px;   
    text-align:center;   
      }   
@@ -266,13 +147,14 @@ z-index: 2;
   position: absolute;
   height: 40px;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(61,61,61,0.8);
   bottom: 0px;
   text-align: center;
 }
 .foot a{ 
   display: block;
   margin-top: 10px; 
+  color: white;
 }
 .large-header {
   position: relative;
@@ -284,19 +166,6 @@ z-index: 2;
 
 }
 
-ul.sdt_menu{list-style:none;font-family:"Myriad Pro", "Trebuchet MS", sans-serif;font-size:14px;width:1020px;height:85px;margin:150px auto 0 auto;padding:0;}
-ul.sdt_menu a{text-decoration:none;outline:none;}
-ul.sdt_menu li{float:left;width:170px;height:85px;position:relative;cursor:pointer;}
-ul.sdt_menu li > a{position:absolute;top:0;left:0;width:170px;height:85px;z-index:12;background:url(images/overlay.png) no-repeat top right;-moz-box-shadow:0 0 2px #000 inset;-webkit-box-shadow:0 0 2px #000 inset;box-shadow:0 0 2px #000 inset;}
-ul.sdt_menu li a img{border:none;position:absolute;width:0;height:0;bottom:0;left:85px;z-index:100;-moz-box-shadow:0 0 4px #000;-webkit-box-shadow:0 0 4px #000;box-shadow:0 0 4px #000}
-ul.sdt_menu li span.sdt_wrap{position:absolute;top:25px;left:0;width:170px;height:60px;z-index:15;}
-ul.sdt_menu li span.sdt_active{position:absolute;background:#111;top:85px;width:170px;height:0;left:0;z-index:14;-moz-box-shadow:0 0 4px #000 inset;-webkit-box-shadow:0 0 4px #000 inset;box-shadow:0 0 4px #000 inset;}
-ul.sdt_menu li span span.sdt_link,ul.sdt_menu li span span.sdt_descr,ul.sdt_menu li div.sdt_box a{margin-left:15px;text-transform:uppercase;text-shadow:1px 1px 1px #000;}
-ul.sdt_menu li span span.sdt_link{color:#fff;font-size:24px;float:left;clear:both;}
-ul.sdt_menu li span span.sdt_descr{color:#0B75AF;float:left;clear:both;width:155px;font-size:10px;letter-spacing:1px;}
-ul.sdt_menu li div.sdt_box{position:absolute;width:170px;overflow:hidden;height:155px;padding-top:15px;top:85px;left:0;display:none;background:#000;}
-ul.sdt_menu li div.sdt_box a{line-height:30px;color:#0B75AF;font-size:12px;display:block;}
-ul.sdt_menu li div.sdt_box a:hover{color:#fff;}
 </style>
 
 
@@ -340,8 +209,8 @@ ul.sdt_menu li div.sdt_box a:hover{color:#fff;}
 <script>
 $(function(){
     $('#h5').fullpage({
- 		paddingTop: '50px',     
- 		 'verticalCentered': false,
+ 		   paddingTop: '50px',     
+ 		    'verticalCentered': false,
         'css3': true,
         'sectionsColor': ['#6289C6', '#01253C', '#000', '#695684','#000'],
         anchors: ['page1', 'page2', 'page3', 'page4','page5'],
@@ -362,54 +231,18 @@ $(function(){
                 clearInterval(setInterval2);  
     })
    </script>
-   <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="scripts/jQuery Easing.js"></script>
-<script type="text/javascript">
-$(function() {
-  $('#sdt_menu > li').bind('mouseenter',function(){
-    
-    var $elem = $(this);
-    
-    $elem.find('img').stop(true).animate({
-        'width':'170px',
-        'height':'170px',
-        'left':'0px'
-       },400,'easeOutBack').andSelf().find('.sdt_wrap').stop(true).animate({'top':'140px'},500,'easeOutBack').andSelf().find('.sdt_active').stop(true).animate({'height':'170px'},300,function(){
-        var $sub_menu = $elem.find('.sdt_box');
-        if($sub_menu.length){
-          var left = '170px';
-          if($elem.parent().children().length == $elem.index()+1)
-            left = '-170px';
-          $sub_menu.show().animate({'left':left},200);
-        } 
-    });
-    
-  }).bind('mouseleave',function(){
-    var $elem = $(this);
-    
-    var $sub_menu = $elem.find('.sdt_box');
-    
-    if($sub_menu.length)
-      
-      $sub_menu.hide().css('left','0px');
-      
-      $elem.find('.sdt_active').stop(true).animate({'height':'0px'},300).andSelf().find('img').stop(true).animate({
-        'width':'0px',
-        'height':'0px',
-        'left':'85px'},400).andSelf().find('.sdt_wrap').stop(true).animate({'top':'25px'},500);
-  });
   
-});
-</script>   
+   
 </head>
 
 
 <body>
+
 <header class="hd">
         <div class="inner">
             <a id="logo"><img src="images/logo.png"  width=61px  height=50px></a>
             <nav>
-                <ul class="menu">
+                <ul class="menu1">
                     <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
                     <li data-menuanchor="page2"><a href="#page2">数据大厅</a></li>
                     <li data-menuanchor="page3"><a href="#page3">图书馆数据分析</a></li>
@@ -437,243 +270,111 @@ $(function() {
 
 	</div>
     <div class="section" id="page-2">
-    <div class="slide" id="page21">
-    <div class="slider">
-	<div class="main" id="template_main">
-         <div class="main-i main-i_active" id="main_{{index}}">
-            <div class="caption">
-                <h2>{{h2}}</h2>
-                <h3>{{h3}}</h3>
-            </div>
-            <img src="images/{{index}}.jpg"/>
-         </div>
-       </div>
-       <div class="ctrl" id="template_ctrl">
-         <a class="ctrl-i ctrl-i_active" id="ctrl_{{index}}" href="javascript:switchSlider({{index}});"><img src="images/{{index}}.jpg" class="picture"/></a>
-       </div>
-    <script type="text/javascript">
-  /*1.定义数据*/
-  var data = [
-  {img:11,h2:'DATA SCIENCE',h3:'社交'},
-  {img:22,h2:'DATA SCIENCE',h3:'数据分析'},
-  {img:33,h2:'DATA SCIENCE',h3:'数据关联'},
-  {img:44,h2:'DATA SCIENCE',h3:'数据展示'},
- 
-  ];
-  /*2g通用函数--获取DOM*/
-  var g = function(id){
-   if(id.substr(0,1)=='.'){
-    return document.getElementsByClassName(id.substr(1));
-   }
-   return document.getElementById(id);
-  }
-  /*3添加幻灯片的操作（所有的幻灯片&所有的按钮 ）*/
-  function addSliders(){
-   //3.1获取模板
-    var tpl_main = g('template_main').innerHTML
-        .replace(/^\s*/,'')
-        .replace(/\s*$/,'');
-    var tpl_ctrl = g('template_ctrl').innerHTML
-        .replace(/^\s*/,'')
-        .replace(/\s*$/,'');
-   //3.2定义最终输出HTML的变量
-   var out_main = [];
-   var out_ctrl = [];
-   //3.3遍历所有的数据，构建最终输出的HTML
-   for( i in data){
-    var _html_main = tpl_main
-      .replace(/{{index}}/g,data[i].img)
-      .replace(/{{h2}}/g,data[i].h2)
-      .replace(/{{h3}}/g,data[i].h3)
-      .replace(/{{css}}/g,['','main-i_right'][i%2]);   //随机的添加main-i_right样式
-    var _html_ctrl = tpl_ctrl
-      .replace(/{{index}}/g,data[i].img);
-     
-      out_main.push(_html_main);
-      out_ctrl.push(_html_ctrl);
-   }
-   //3.4把HTML 回写到对应的DOM里面
-   g('template_main').innerHTML = out_main.join('');
-   g('template_ctrl').innerHTML = out_ctrl.join('');
-   //7增加#main_background
-   g('template_main').innerHTML += tpl_main
-      .replace(/{{index}}/g,'{{index}}')
-      .replace(/{{h2}}/g,data[i].h2)
-      .replace(/{{h3}}/g,data[i].h3);
-      g('main_{{index}}').id = 'main_background';
-  }
-   //5 幻灯片切换
-   function switchSlider(n){
-    //5.1获取要展现的幻灯片&控制按钮 DOM
-    var main = g('main_'+n);
-    var ctrl = g('ctrl_'+n);
-   
-    //5.2获取所有的幻灯片以及控制按钮
-    var clear_main = g('.main-i');
-    var clear_ctrl = g('.ctrl-i');
-    //5.3清楚他们的active样式
-    for(i = 0 ;i < clear_ctrl.length; i++){
-     clear_main[i].className = clear_main[i].className
-                  .replace('main-i_active','');
-     clear_ctrl[i].className = clear_ctrl[i].className
-                  .replace('ctrl-i_active','');
-    }
-    //5.4为当前的控制按钮和幻灯片添加样式
-    main.className += ' main-i_active';
-    ctrl.className += ' ctrl-i_active';
-    //7.2切换时，复制上一张幻灯片到main_background 中
-    setTimeout(function(){
-     g('main_background').innerHTML = main.innerHTML;
-    },1000)
-   }
-   //6 动态调整图片的 margin-top 以使其2垂直居中
-   function movePictures(){
-    var pictures = g('.picture');
-    for(i = 0 ; i< pictures.length;i++){
-     pictures[i].style.marginTop = (-1*pictures[i].clientHeight/2)+'px';
-    }
-   }
-   
-   //4 定义何时处理幻灯片输出
-   window.onload = function(){
-    addSliders();
-    switchSlider(2);
-    setTimeout(function(){
-     movePictures();
-    },100)
-   }
- </script>
-	
-	
+    
 	</div>
-
-	</div>
-	
-	
-	
-	
-	
-
-        <div class="slide">
-            
-        第二屏的第二屏
-        <ul id="sdt_menu" class="sdt_menu">
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/22.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">ttt</span>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/11.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">zzz</span>
-        </span>
-      </a>
-      <div class="sdt_box">
-        <a href="#" target="_blank">某某数据</a>
-        <a href="#" target="_blank">qqq</a>
-        <a href="#" target="_blank">eee</a>
-      </div>
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/33.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">fff</span>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/44.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">ddd</span>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/11.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">ccc</span>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        <img src="images/22.jpg" alt=""/>
-        <span class="sdt_active"></span>
-        <span class="sdt_wrap">
-          <span class="sdt_link">某某数据</span>
-          <span class="sdt_descr">bbb</span>
-        </span>
-      </a>
-      <div class="sdt_box">
-        <a href="#" target="_blank">aaa</a>
-        <a href="#" target="_blank">aaa</a>
-        <a href="#" target="_blank">aaa</a>
-      </div>
-    </li>
-  </ul>
-        </div>
-        <div class="slide">第二屏的第三屏</div>
-        <div class="slide">第二屏的第四屏</div>
-        <div class="slide">第二屏的第五屏</div>
-        <div class="slide">第二屏的第六屏</div>
-    </div>
+	                     
+  
 
     <div class="section" id="page-3">
-	<div class="box">
-		<div class="link mission-link">
-			<span class="icon animated"></span>
-			<a class="button" data-title="嘿嘿嘿嘿嘿嘿">
-			<span class="line line-top"></span>
-			<span class="line line-right"></span>
-			<span class="line line-bottom"></span>
-			<span class="line line-left"></span>
-			早中晚
-			</a>
-		</div>
-		<div class="link play-link">
-			<span class="icon animated"></span>
-			<a class="button" data-title="哈哈哈哈哈哈哈">
-			<span class="line line-top"></span>
-			<span class="line line-right"></span>
-			<span class="line line-bottom"></span>
-			<span class="line line-left"></span>
-			均值消费
-			</a>
-		</div>
-		<div class="link touch-link">
-			<span class="icon animated"></span>
-			<a class="button" data-title="呵呵呵呵呵呵">
-			<span class="line line-top"></span>
-			<span class="line line-right"></span>
-			<span class="line line-bottom"></span>
-			<span class="line line-left"></span>
-			比值
-			</a>
-		</div>
-		<p class="tip"><em></em><span></span></p>
-	</div>
+  
+  <section class="strips">
+  <article class="strips__strip">
+  <div class="strip__content">
+    <h1 class="strip__title" data-name="Lorem">一食堂</h1>
+       <div class="strip__inner-text">
+      <h2><a href="#">各学院在该食堂消费情况</a></br></br><a href="#">该食堂各窗口出售情况</a></h2>
+
+      
+      <p><a href="#" target="_blank"></a></p>
+  
     </div>
+  </div>
+  </article>
+  <article class="strips__strip">
+  <div class="strip__content">
+    <h1 class="strip__title" data-name="Ipsum">二食堂</h1>
+    <div class="strip__inner-text">
+    <h2><a href="#">各学院在该食堂消费情况</a></br></br><a href="#">该食堂各窗口出售情况</a></h2>
+    
+    <p><a href="#" target="_blank"></a></p>
+    
+    </div>
+  </div>
+  </article>
+  <article class="strips__strip">
+  <div class="strip__content">
+    <h1 class="strip__title" data-name="Dolor">三食堂</h1>
+    <div class="strip__inner-text">
+    <h2><a href="#">各学院在该食堂消费情况</a></br></br><a href="#">该食堂各窗口出售情况</a></h2>
+    
+    
+    </div>
+  </div>
+  </article>
+  <article class="strips__strip">
+  <div class="strip__content">
+    <h1 class="strip__title" data-name="Sit">四食堂</h1>
+    <div class="strip__inner-text">
+    <h2><a href="#">各学院在该食堂消费情况</a></br></br><a href="#">该食堂各窗口出售情况</a></h2>
+
+   
+    </div>
+  </div>
+  </article>
+  <article class="strips__strip">
+  <div class="strip__content">
+    <h1 class="strip__title" data-name="Amet">食堂数据汇总</h1>
+    <div class="strip__inner-text">
+    <h2><a href="#">各学院在所有食堂消费情况</a></br></br><a href="#">所有食堂各窗口出售情况</a></br></br><a href="#">各时间段所有食堂的消费情况</a></br></br><a href="#">人均消费情况</a></h2>
+    
+
+    </div>
+  </div>
+  </article>
+  <i class="fa fa-close strip__close"></i>
+</section>
+
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+var Expand = function () {
+  var tile = $('.strips__strip');
+  var tileLink = $('.strips__strip > .strip__content');
+  var tileText = tileLink.find('.strip__inner-text');
+  var stripClose = $('.strip__close');
+  var expanded = false;
+  var open = function () {
+    var tile = $(this).parent();
+    if (!expanded) {
+      tile.addClass('strips__strip--expanded');
+      tileText.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
+      stripClose.addClass('strip__close--show');
+      stripClose.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
+      expanded = true;
+    }
+  };
+  var close = function () {
+    if (expanded) {
+      tile.removeClass('strips__strip--expanded');
+      tileText.css('transition', 'all 0.15s 0 cubic-bezier(0.23, 1, 0.32, 1)');
+      stripClose.removeClass('strip__close--show');
+      stripClose.css('transition', 'all 0.2s 0s cubic-bezier(0.23, 1, 0.32, 1)');
+      expanded = false;
+    }
+  };
+  var bindActions = function () {
+    tileLink.on('click', open);
+    stripClose.on('click', close);
+  };
+  var init = function () {
+    bindActions();
+  };
+  return { init: init };
+}();
+Expand.init();
+</script>
 
 
-
+</div>
     <div class="section" id="page-4">
         <div class="slide" id="map">
         <div class="shitang">
@@ -700,11 +401,7 @@ $(function() {
  <div id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</div>
 
         </div>
-        <div class="slide">第三屏的第二屏</div>
-        <div class="slide">第三屏的第三屏</div>
-        <div class="slide">第三屏的第四屏</div>
-        <div class="slide">第三屏的第五屏</div>
-        <div class="slide">第三屏的第六屏</div>
+       
     </div>
 
 
@@ -740,7 +437,7 @@ var jiathis_config={
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
-    <p style="height:70px;"></p>
+    <p style="height:50%;margin-top:-200px;"></p>
    <div style="position:relative;" class="slideshow grid_12">
   <div class="holder">
     <!-- 主体部分 -->
