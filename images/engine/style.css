@@ -11,16 +11,7 @@
     font-style: normal;
 }
 
-@font-face {
-  font-family: 'fullscreen';
-  src: url('fullscreen.eot');
-  src: url('fullscreen.eot#iefix') format('embedded-opentype'),
-       url('fullscreen.woff') format('woff'),
-       url('fullscreen.ttf') format('truetype'),
-       url('fullscreen.svg#fullscreen') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'wowslider-controls';
@@ -31,6 +22,7 @@
        url('wowslider-controls.svg#wowslider-controls') format('svg');
   font-weight: normal;
   font-style: normal;
+  
 }
 
 #wowslider-container { 
@@ -44,11 +36,6 @@
 	border:none;
 	text-align:left; /* reset align=center */
 	font-size: 10px;
-}
-#wowslider-container.fullscreen-mode,
-#wowslider-container.fullwidth-mode {
-	max-width:none;
-	max-height:none;
 }
 
 
@@ -96,10 +83,7 @@
 	display:block;
 	color:transparent;
 }
-#wowslider-container.fullscreen-mode .ws_images a,
-#wowslider-container.fullwidth-mode .ws_images a {
-	height:100%;
-}
+
 #wowslider-container img{
 	max-width: none !important;
 }
@@ -119,6 +103,7 @@
 	text-decoration: none; 
 	outline: none; 
 	border: none; 
+	
 }
 
 #wowslider-container  .ws_bullets { 
@@ -182,12 +167,13 @@
 }
 #wowslider-container a.ws_next{
 	right:10px;
+
 }
 #wowslider-container a.ws_next:after {
 	content: '\e801';
 	display: block;
 	font-size: 3.5em;
-	line-height: 1.7em;
+	line-height: 1.58em;
 }
 #wowslider-container a.ws_prev {
 	left:10px;
@@ -196,7 +182,7 @@
 	content: '\e800';
 	display: block;
 	font-size: 3.5em;
-	line-height: 1.7em;
+	line-height: 1.58em;
 }
 
 #wowslider-container a.ws_prev:hover:after {
