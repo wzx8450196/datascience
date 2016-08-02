@@ -4,18 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>DS</title>
 <link rel="stylesheet" href="styles/jquery.fullPage.css"/>
-<link rel="stylesheet" href="styles/reset.css"/>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/allstyle.css">
 <link rel="stylesheet" type="text/css" href="images/engine/style.css" media="screen" />
-<link href="css/css.css" rel="stylesheet" type="text/css" />
-
 <!-- 食堂 -->
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel='stylesheet prefetch' href='http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css'>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <script type="text/javascript" src="images/engine/jquery.js"></script>
-<script src="scripts/jquery-1.8.3.min.js"></script>
 <script src="scripts/script.js"></script>
 
 <style type="text/css">
@@ -24,16 +19,45 @@ margin:0;
 padding:0;
 font-size:16px;
 font-family:微软雅黑;
-font-color: blue;
+border-radius:3px;
 }
 
 .page-3 a {
   font-size: 30px;
 }
+#slide1{
+     background-image: url(images/1.45.gif);
+     background-size:cover; 
+}
+
+#slide2{
+    background-image: url(images/bg2.png);  
+    background-size: cover;
+    position: relative;
+}
+
+#slide3{
+  background-image: url(images/bg2.png);  
+    background-size: cover;
+    position: relative;
+}
+
+
+.s1 img{  -webkit-transform: translateY(-500px);  transform: translateY(-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
+.s1 .active img{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);}
+#rslogan{
+   position:absolute;left: 50px;bottom: 30px;
+}
+#lslogan{
+   position:absolute;right: 0px;bottom: 10px;
+}
+
+
 
 #page-1{
-    background-image: url(images/背景.jpg);
-    background-size:cover;
+   background-image: url(images/bg2.png);  
+   background-size: cover;
+   position: relative;
 }
 #page-2{
     background-image: url(images/2BG.jpg);  
@@ -41,10 +65,10 @@ font-color: blue;
     background-size: cover;
 
 }   
-#page-3{
+/*#page-3{
     background-image: url(images/1BG.jpg);
     background-size:cover;
-}
+}*/
 
 #page-4{
     background-image: url(images/2BG.jpg);
@@ -59,20 +83,38 @@ font-color: blue;
 
 
 .hd{ position: absolute; left: 0; top: 0; z-index: 1;background: rgba(0,0,0,0.8); color: white; width: 100%; height: 50px;}
-.inner{ width: 800px; height: 50px;margin-left:100%; }
-#logo{ float: left;left: 0px;position: absolute;margin-left: 10px; }
+.inner{ width: 100%; height: 50px;}
+#logo{ float: left;right: 0px;position: absolute;margin-left: 10px; }
 .inner nav{ float:left; }
-.inner nav .menu1 {margin-left: -565px;}
-.inner nav .menu1 li{ float: left;list-style-type:none; }
-.inner nav .menu1 li a{ display: block;  padding: 0 20px; line-height: 50px; cursor:pointer; color: #ffffff;text-decoration-style: none;}
-.inner nav .menu1 li a:hover{ background: #4196fc; color: #fff;}
+.inner nav .menu {right: 0px;}
+.inner nav .menu li{ float: left;list-style-type:none; }
+.inner nav .menu li a{ 
+    border-radius: 5px;
+    color: #C4302B;
+    line-height: 25px;
+    text-decoration: none;
+  text-transform: uppercase;
+  display: block;  padding: 0 20px; line-height: 50px; cursor:pointer; color: #ffffff;text-decoration-style: none;}
+.inner nav .menu li a:hover,
+.inner nav .menu li.active a{ background: #4196fc; color: #fff;opacity: 1;}
+.menu li:hover > a {
+    border-radius: 5px 0 0 0;
+    color: #C4302B;
+}
 
 
+  
+.dc a {
+  opacity:0.5;transition: opacity .2s ease-in-out ; border-radius:3px;
+}
+.dc a:hover{
+  opacity: 1;
+}
 
 #map{
     color: #000;
     font-size: 50px;
-     text-align:center;
+    text-align: center;
 }
 
 .shitang {
@@ -117,28 +159,14 @@ font-color: blue;
 
 
 
-#page21{
-    padding: 100px 0px;
-    font-size:14px ;
-    font-family:'Avenir Next' ;
-    color:#555;
-    -webkit-font-smoonthing:antialiased;
-}
 #loadDiv{   
    position:absolute;   
    left:40%;   
    top:40%;   
-<<<<<<< HEAD
    border:3px solid #272822; 
    padding:10px;   
    font:bold 14px verdana,tahoma,helvetica;   
    color:#272822;   
-=======
-   border:3px solid #131b28; 
-   padding:10px;   
-   font:bold 14px verdana,tahoma,helvetica;   
-   color:#131b28;   
->>>>>>> origin/master
    width:280px;   
    text-align:center;   
      }   
@@ -156,14 +184,11 @@ font-color: blue;
   margin-top: 10px; 
   color: white;
 }
-.large-header {
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-
+.strips{
+  display:none;
+}
+.abc{
+  display: none;
 }
 
 </style>
@@ -173,7 +198,6 @@ font-color: blue;
 
 <script src="scripts/jquery.js"></script>
 <script src="scripts/jquery.fullPage.js"></script>
-<script type="text/javascript" src="scripts/carousel.js"></script>
 <script language="javascript" type="text/javascript">
     $(function () {
         //navlist
@@ -206,19 +230,70 @@ font-color: blue;
 </script>
 
 
+
 <script>
-$(function(){
-    $('#h5').fullpage({
- 		   paddingTop: '50px',     
- 		    'verticalCentered': false,
+window.onload=$(function(){
+    $('#h5').fullpage({   
+        'verticalCentered': false,
         'css3': true,
-        'sectionsColor': ['#6289C6', '#01253C', '#000', '#695684','#000'],
-        anchors: ['page1', 'page2', 'page3', 'page4','page5'],
-        'navigation': true,
+        'sectionsColor': ['#fff', '#fff', '#fff', '#fff','#fff'],
+        'anchors': ['page1', 'page2', 'page3', 'page4','page5'],
+        'navigation': false,
         'navigationPosition': 'right',
-       
+        'slidesNavigation':true,
+        'loopHorizontal':true,
+        'navigationTooltips': ['首页','数据大厅','图书馆数据分析','食堂数据分析','团队简介'],
+        'menu': '.menu',
+        'loopBottom': true,
+       afterLoad: function(anchorLink, index){
+     if(index == 1){
+        $('.section1').find('div').fadeIn(500);
+    
+      }
+      if(index == 2){
+        $('.section2').find('div').fadeIn(500);
+    
+      }
+      if(index == 3){
+        $('.section3').find('section').fadeIn(0);
+         
+        
+      }
+      if(index == 4){
+        $('.section4').find('ul').fadeIn(500);
+      }
+       if(index == 5){
+        $('.section5').find('ul').fadeIn(500);
+      }
+    },
+    onLeave: function(index, direction){
+       if(index == '1'){
+        $('.section1').find('div').fadeOut(2000);
+      
+      }
+      if(index == '2'){
+        $('.section2').find('div').fadeOut(2000);
+      
+      }
+      if(index == '3'){
+        $('.section3').find('section').fadeOut(2000);
+      
+      }
+      if(index == '4'){
+        $('.section4').find('ul').fadeOut(2000);
+      }
+      if(index == '5'){
+        $('.section5').find('ul').fadeOut(2000);
+      }
+    }
+   
     })
-})</script>
+setInterval(function(){
+        $.fn.fullpage.moveSlideRight();
+    }, 5000);
+}) 
+
+    </script>
 <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 <script language="javascript" type="text/javascript" >
     document.write('<div id=loadDiv >'+'页面正在载入，请等待<span id=loading></span></div>');  
@@ -238,15 +313,15 @@ $(function(){
 
 <body>
 
-<header class="hd">
+<header class="hd dc">
         <div class="inner">
             <a id="logo"><img src="images/logo.png"  width=61px  height=50px></a>
             <nav>
-                <ul class="menu1">
+                <ul class="menu">
                     <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
-                    <li data-menuanchor="page2"><a href="#page2">数据大厅</a></li>
-                    <li data-menuanchor="page3"><a href="#page3">图书馆数据分析</a></li>
-                    <li data-menuanchor="page4"><a href="#page4">食堂数据分析</a></li>
+                    <li data-menuanchor="page2"><a href="#page2">图书馆数据分析</a></li>
+                    <li data-menuanchor="page3"><a href="#page3">食堂数据分析</a></li>
+                    <li data-menuanchor="page4"><a href="#page4">食堂数据地图</a></li>
                     <li data-menuanchor="page5"><a href="#page5">团队简介</a></li>
                 </ul>
             </nav>
@@ -255,27 +330,40 @@ $(function(){
 
 
 
+
+
 <div id="hiddenDiv" style="display: none"> 
 
 <div id="h5">
 
-    <div class="section" id="page-1">
-  
-        <div id="large-header" class="large-header">
-          <canvas id="demo-canvas"></canvas>  
-        </div>      
-    
+    <div class="section s1 active section1" id="page-1">
+
+            <div class="slide" id="slide1">
+
+            </div>
+             
+
+            <div class="slide" id="slide2">
+                  <img id="rslogan" src="images/rslogan.png">
+                  <img id="lslogan" src="images/lslogan.png">
+            </div>
+
+
+            <div class="slide" id="slide3">
+
+            </div>
+
+</div>
 
 
 
-	</div>
-    <div class="section" id="page-2">
-    
+
+    <div class="section section2 s2" id="page-2">
 	</div>
 	                     
   
 
-    <div class="section" id="page-3">
+    <div class="section section3" id="page-3">
   
   <section class="strips">
   <article class="strips__strip">
@@ -305,7 +393,7 @@ $(function(){
   <div class="strip__content">
     <h1 class="strip__title" data-name="Dolor">三食堂</h1>
     <div class="strip__inner-text">
-    <h2><a href="#">各学院在该食堂消费情况</a></br></br><a href="#">该食堂各窗口出售情况</a></h2>
+    <h2><a href="sonpage/son2/son3.html">各学院在该食堂消费情况</a></br></br><a href="sonpage/son2/son3.html">该食堂各窗口出售情况</a></h2>
     
     
     </div>
@@ -325,7 +413,7 @@ $(function(){
   <div class="strip__content">
     <h1 class="strip__title" data-name="Amet">食堂数据汇总</h1>
     <div class="strip__inner-text">
-    <h2><a href="#">各学院在所有食堂消费情况</a></br></br><a href="#">所有食堂各窗口出售情况</a></br></br><a href="#">各时间段所有食堂的消费情况</a></br></br><a href="#">人均消费情况</a></h2>
+    <h2><a href="sonpage/son2/sonall.html">各学院在所有食堂消费情况</a></br></br><a href="#">所有食堂各窗口出售情况</a></br></br><a href="#">各时间段所有食堂的消费情况</a></br></br><a href="#">人均消费情况</a></h2>
     
 
     </div>
@@ -334,7 +422,7 @@ $(function(){
   <i class="fa fa-close strip__close"></i>
 </section>
 
-<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
 <script>
 var Expand = function () {
   var tile = $('.strips__strip');
@@ -374,11 +462,11 @@ Expand.init();
 </script>
 
 
-</div>
-    <div class="section" id="page-4">
+</div >
+    <div class="section dc section4" id="page-4">
         <div class="slide" id="map">
         <div class="shitang">
-        <ul>
+        <ul class="abc">
         <li id="yst"><a href="#">一食堂</a></li>
         <li id="st2"><a href="#">二食堂</a></li>
         <li id="st3"><a href="#">三食堂</a></li>
@@ -387,7 +475,7 @@ Expand.init();
         </ul>
 
          <div class="shitang" id="qingshi">
-         <ul>
+         <ul class="abc">
         <li id="czy"><a href="#">翠竹苑</a></li>
         <li id="dgy"><a href="#">丹桂苑</a></li>
         <li id="yly"><a href="#">玉兰苑</a></li>
@@ -396,22 +484,23 @@ Expand.init();
         </ul>
         </div>
         </div>
-        <div id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</div>
-<div id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</div>
- <div id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</div>
-
-        </div>
+        <ul class="abc">
+        <li id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</li>
+        <li id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</li>
+        <li id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</li>
+        </ul>
+        
        
     </div>
 
 
+</div>
 
 
 
 
 
-
-<div class="section" id="page-5">
+<div class="section section5" id="page-5">
 
     
     <!-- JiaThis Button BEGIN -->
@@ -437,13 +526,12 @@ var jiathis_config={
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
-    <p style="height:50%;margin-top:-200px;"></p>
-   <div style="position:relative;" class="slideshow grid_12">
+   <div style="position:absolute;top:50%;left:50%;margin-left:-480px;margin-top:-200px;" class="slideshow grid_12">
   <div class="holder">
     <!-- 主体部分 -->
     <div id="wowslider-container">
       <div class="ws_images">
-        <ul>
+        <ul class="abc">
           <li><img src="images/lj.jpg" /></li>
           <li><img src="images/zst.jpg" /></li>
           <li><img src="images/fy.jpg" /></li>
@@ -486,11 +574,7 @@ var jiathis_config={
 Guizhou Province Key & Special Laboratory of "Technology & Security of E-Business"&copy;copyright
 </a>
           </div>
-<script>
-$(function(){
-    Carousel.init($(".J_Poster"));
-});
-</script>
+
     
 
 
@@ -503,10 +587,7 @@ $(function(){
 </div>
 
 </div>  
-    <script src="scripts/TweenLite.min.js"></script>
-    <script src="scripts/EasePack.min.js"></script>
-    <script src="scripts/rAF.js"></script>
-    <script src="scripts/demo-1.js"></script>
+ 
 
 </body>
 
