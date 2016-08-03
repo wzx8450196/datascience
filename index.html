@@ -25,40 +25,16 @@ border-radius:3px;
 .page-3 a {
   font-size: 30px;
 }
-#slide1{
-     background-image: url(images/1.45.gif);
-     background-size:cover; 
-}
-
-#slide2{
-    background-image: url(images/bg2.png);  
-    background-size: cover;
-    position: relative;
-}
-
-#slide3{
-  background-image: url(images/bg2.png);  
-    background-size: cover;
-    position: relative;
-}
-
-
-.s1 img{  -webkit-transform: translateY(-500px);  transform: translateY(-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
-.s1 .active img{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);}
-#rslogan{
-   position:absolute;left: 50px;bottom: 30px;
-}
-#lslogan{
-   position:absolute;right: 0px;bottom: 10px;
-}
 
 
 
-#page-1{
+
+
+/*#page-1{
    background-image: url(images/bg2.png);  
    background-size: cover;
    position: relative;
-}
+}*/
 #page-2{
     background-image: url(images/2BG.jpg);  
     position:relative;
@@ -79,6 +55,89 @@ border-radius:3px;
     background-image: url(images/2BG.jpg);
     background-size:cover;
     position: relative;
+}
+
+/*第一页第一屏*/
+#slide1{
+     background-image: url(images/1bg.png);
+     background-size:cover; 
+     position: relative;
+}
+.s1 #lslogan{ -webkit-transform:translate3d(-500px,-500px,-500px);  transform:translate3d(-500px,-500px,-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s;}
+.s1 .active #lslogan{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+.s1 #rslogan{  -webkit-transform: translateY(500px);  transform: translateY(500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
+.s1 .active #rslogan{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+#rslogan{
+   position:absolute;left: 50px;bottom: 30px;width:53.9%;height:60.1%;
+}
+#lslogan{
+   position:absolute;right: 0px;bottom: 10px;width:53.8%;height:77%;
+}
+/*第一页第二屏*/
+#slide2{
+    background-image: url(images/2bg.png);  
+    background-size: cover;
+    position: relative;    
+}
+#tu1{
+  left:6.4% ;bottom:7.6% ;
+}
+#tu2{
+  left:37.4%;bottom:14.3% ;
+}
+#tu3{
+  left:68.7%;bottom:2.3% ;
+}
+#slogan2{
+  position: absolute;left:3.4%;top:23.4%;width:95.16%;height:41.2%;
+}
+
+ #tu1,#tu2,#tu3{ width:25.6%;height:29.94%;position: absolute;}
+
+.s1 #tu1{  -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s;}
+.s1 .active #tu1{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+.s1 #tu2{ -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s; }
+.s1 .active #tu2{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+.s1 #tu3{  -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s;}
+.s1 .active #tu3{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+/*第一页第三屏*/
+#slide3{
+/*  background-image: url(images/3bg.png);  
+    background-size: cover;*/
+    position: relative;
+}
+.s1 #uslogan{  -webkit-transform: translateY(-500px);  transform: translateY(-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
+.s1 .active #uslogan{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+.s1 #dslogan{  -webkit-transform: translateY(500px);  transform: translateY(500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
+.s1 .active #dslogan{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
+}
+.s1 #ds{  -webkit-transform: translateX(-1200px);  transform: translateX(-1200px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 3s 1.5s; }
+.s1 .active #ds{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);}
+#uslogan{
+   position:absolute;left:8.8%;top:16.5%;width:34.7%;height:20.4%;
+}
+#dslogan{
+   position:absolute;left:8.8%;top:50%;width:34.0%;height:27.4%;
+}
+#ds{
+  position: absolute;left:76.8%;bottom: 89.5%;width:14,12%;height:3.0%;
+}
+#photo3{
+  position: absolute;width: 100%;height: 100%;z-index: -1;
+}
+
+/*淡入淡出*/
+.dc a {
+  opacity:0.5;transition: opacity .2s ease-in-out ; border-radius:3px;
+}
+.dc a:hover{
+  opacity: 1;
 }
 
 
@@ -103,13 +162,7 @@ border-radius:3px;
 }
 
 
-  
-.dc a {
-  opacity:0.5;transition: opacity .2s ease-in-out ; border-radius:3px;
-}
-.dc a:hover{
-  opacity: 1;
-}
+
 
 #map{
     color: #000;
@@ -156,9 +209,6 @@ border-radius:3px;
 #qingshi ul{
     bottom:65px;
 }
-
-
-
 #loadDiv{   
    position:absolute;   
    left:40%;   
@@ -192,10 +242,6 @@ border-radius:3px;
 }
 
 </style>
-
-
-
-
 <script src="scripts/jquery.js"></script>
 <script src="scripts/jquery.fullPage.js"></script>
 <script language="javascript" type="text/javascript">
@@ -290,7 +336,7 @@ window.onload=$(function(){
     })
 setInterval(function(){
         $.fn.fullpage.moveSlideRight();
-    }, 5000);
+    }, 6000000);
 }) 
 
     </script>
@@ -310,7 +356,6 @@ setInterval(function(){
    
 </head>
 
-
 <body>
 
 <header class="hd dc">
@@ -327,30 +372,31 @@ setInterval(function(){
             </nav>
         </div>
     </header>
-
-
-
-
-
 <div id="hiddenDiv" style="display: none"> 
 
 <div id="h5">
 
     <div class="section s1 active section1" id="page-1">
 
-            <div class="slide" id="slide1">
-
+            <div class="slide sl1" id="slide1">
+                  <img id="rslogan" src="images/1rslogan.png">
+                  <img id="lslogan" src="images/1lslogan.png">
             </div>
              
 
             <div class="slide" id="slide2">
-                  <img id="rslogan" src="images/rslogan.png">
-                  <img id="lslogan" src="images/lslogan.png">
+                   <img id="tu1" src="images/2图1.png" class="stretch">
+                   <img id="tu2" src="images/2图2.png" class="stretch">
+                   <img id="tu3" src="images/2图3.png" class="stretch">
+                   <img id="slogan2" src="images/2slogan.png">
             </div>
 
 
             <div class="slide" id="slide3">
-
+                   <img id="uslogan" src="images/3uslogan.png">
+                   <img id="dslogan" src="images/3dslogan.png">
+                   <img id="ds" src="images/3ds.png">
+                   <img id="photo3" src="images/3bg.png">
             </div>
 
 </div>
@@ -532,6 +578,7 @@ var jiathis_config={
     <div id="wowslider-container">
       <div class="ws_images">
         <ul class="abc">
+          <li><img src="images/gywm.jpg" /></li>
           <li><img src="images/lj.jpg" /></li>
           <li><img src="images/zst.jpg" /></li>
           <li><img src="images/fy.jpg" /></li>
@@ -547,6 +594,7 @@ var jiathis_config={
       </div>
       <div class="ws_bullets">
         <div>
+          <a href="#"><img src="images/gywm.jpg"/></a>
           <a href="#"><img src="images/lj.jpg" /></a>
           <a href="#"><img src="images/zst.jpg" /></a>
           <a href="#"><img src="images/fy.jpg" /></a>
