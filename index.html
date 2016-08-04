@@ -63,7 +63,7 @@ border-radius:3px;
      background-size:cover; 
      position: relative;
 }
-.s1 #lslogan{ -webkit-transform:translate3d(-500px,-500px,-500px);  transform:translate3d(-500px,-500px,-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s;}
+.s1 #lslogan{ -webkit-transform:translate3d(-500px,-500px,-500px);  transform:translate3d(-500px,-500px,-500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 1.2s;}
 .s1 .active #lslogan{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
 }
 .s1 #rslogan{  -webkit-transform: translateY(500px);  transform: translateY(500px);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 0.8s 0.8s; }
@@ -99,10 +99,10 @@ border-radius:3px;
 .s1 #tu1{  -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s;}
 .s1 .active #tu1{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
 }
-.s1 #tu2{ -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s; }
+.s1 #tu2{ -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 1.2s; }
 .s1 .active #tu2{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
 }
-.s1 #tu3{  -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 0.8s;}
+.s1 #tu3{  -webkit-transform:rotate3d(0,1,0,270deg);  transform:rotate3d(0,1,0,270deg);  opacity: 0;transition-delay: 1.2s,opacity: 0; transition: 1.5s 1.6s;}
 .s1 .active #tu3{ opacity: 1 ; -webkit-transform: translateY(0); transform: translateY(0);
 }
 /*第一页第三屏*/
@@ -336,7 +336,7 @@ window.onload=$(function(){
     })
 setInterval(function(){
         $.fn.fullpage.moveSlideRight();
-    }, 6000000);
+    }, 7000);
 }) 
 
     </script>
@@ -1004,22 +1004,22 @@ var marker5_1 = new AMap.Marker({
         //center: [106.6455207740,26.3774406535],
             var heatmap1= new AMap.Heatmap(map);
             var points=[
-            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
-            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
-            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
-            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
-            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
-            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
-            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
-            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
-            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
-            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
-            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
-            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
-            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
-            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
-            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
-            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                      {"lng":106.641008,"lat":26.371704,"count":25},//翠1
+                      {"lng":106.641159,"lat":26.372554,"count":25},//翠2
+                      {"lng":106.640782,"lat":26.374347,"count":25},//翠3
+                      {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+                      {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+                      {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+                      {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+                      {"lng":106.646354,"lat":26.383898,"count":10},//玉1
+                      {"lng":106.647033,"lat":26.383413,"count":10},//玉2
+                      {"lng":106.645675,"lat":26.382952,"count":10},//玉3
+                      {"lng":106.646603,"lat":26.382394,"count":10},//玉4
+                      {"lng":106.644951,"lat":26.382029,"count":10},//玉5
+                      {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+                      {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+                      {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+                      {"lng":106.643872,"lat":26.373203,"count":20}//樱4
                  ];
             heatmap1.setDataSet({
                 data:points
@@ -1079,22 +1079,22 @@ var marker5_1 = new AMap.Marker({
         //center: [106.6455207740,26.3774406535],
             var heatmap2= new AMap.Heatmap(map);
             var points=[
-            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
-            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
-            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
-            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
-            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
-            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
-            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
-            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
-            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
-            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
-            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
-            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
-            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
-            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
-            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
-            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                  {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+                  {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+                  {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+                  {"lng":106.642886,"lat":26.383043,"count":13},//丹4
+                  {"lng":106.643857,"lat":26.382462,"count":14},//丹1
+                  {"lng":106.644637,"lat":26.383504,"count":15},//丹2
+                  {"lng":106.641783,"lat":26.382889,"count":15},//丹3
+                  {"lng":106.646354,"lat":26.383898,"count":16},//玉1
+                  {"lng":106.647033,"lat":26.383413,"count":16},//玉2
+                  {"lng":106.64567,"lat":26.382952,"count":16},//玉3
+                  {"lng":106.646603,"lat":26.382394,"count":16},//玉4
+                  {"lng":106.644951,"lat":26.382029,"count":16},//玉5
+                  {"lng":106.643958,"lat":26.373819,"count":16},//樱2
+                  {"lng":106.643078,"lat":26.373838,"count":20},//樱1
+                  {"lng":106.642896,"lat":26.372752,"count":36},//樱3
+                  {"lng":106.643872,"lat":26.373203,"count":20}//樱4
                  ];
             heatmap2.setDataSet({
                 data:points
@@ -1132,22 +1132,22 @@ var marker5_1 = new AMap.Marker({
         //center: [106.6455207740,26.3774406535],
             var heatmap3= new AMap.Heatmap(map);
             var points=[
-            {"lng":106.641008,"lat":26.371704,"count":10000},//翠1
-            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
-            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
-            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
-            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
-            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
-            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
-            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
-            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
-            {"lng":106.64567 ,"lat":26.382952,"count":16},//玉3
-            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
-            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
-            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
-            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
-            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
-            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                    {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+                    {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+                    {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+                    {"lng":106.642886,"lat":26.383043,"count":35},//丹4
+                    {"lng":106.643857,"lat":26.382462,"count":28},//丹1
+                    {"lng":106.644637,"lat":26.383504,"count":38},//丹2
+                    {"lng":106.641783,"lat":26.382889,"count":28},//丹3
+                    {"lng":106.646354,"lat":26.383898,"count":20},//玉1
+                    {"lng":106.647033,"lat":26.383413,"count":20},//玉2
+                    {"lng":106.64567 ,"lat":26.382952,"count":20},//玉3
+                    {"lng":106.646603,"lat":26.382394,"count":20},//玉4
+                    {"lng":106.644951,"lat":26.382029,"count":20},//玉5
+                    {"lng":106.643958,"lat":26.373819,"count":20},//樱2
+                    {"lng":106.643078,"lat":26.373838,"count":10},//樱1
+                    {"lng":106.642896,"lat":26.372752,"count":10},//樱3
+                    {"lng":106.643872,"lat":26.373203,"count":10}//樱4
                  ];
             heatmap3.setDataSet({
                 data:points
@@ -1181,22 +1181,22 @@ var marker5_1 = new AMap.Marker({
         //center: [106.6455207740,26.3774406535],
             var heatmap4= new AMap.Heatmap(map);
             var points=[
-            {"lng":106.641008,"lat":26.371704,"count":10},//翠1
-            {"lng":106.641159,"lat":26.37255,"count":11},//翠2
-            {"lng":106.640782,"lat":26.374347,"count":12},//翠3
-            {"lng":106.642886,"lat":26.383043,"count":13},//丹4
-            {"lng":106.643857,"lat":26.382462,"count":14},//丹1
-            {"lng":106.644637,"lat":26.383504,"count":15},//丹2
-            {"lng":106.641783,"lat":26.382889,"count":15},//丹3
-            {"lng":106.646354,"lat":26.383898,"count":16},//玉1
-            {"lng":106.647033,"lat":26.383413,"count":16},//玉2
-            {"lng":106.64567,"lat":26.382952,"count":16},//玉3
-            {"lng":106.646603,"lat":26.382394,"count":16},//玉4
-            {"lng":106.644951,"lat":26.382029,"count":16},//玉5
-            {"lng":106.643958,"lat":26.373819,"count":16},//樱2
-            {"lng":106.643078,"lat":26.373838,"count":20},//樱1
-            {"lng":106.642896,"lat":26.372752,"count":36},//樱3
-            {"lng":106.643872,"lat":26.373203,"count":20}//樱4
+                      {"lng":106.641008,"lat":26.371704,"count":10},//翠1
+                      {"lng":106.641159,"lat":26.37255,"count":11},//翠2
+                      {"lng":106.640782,"lat":26.374347,"count":12},//翠3
+                      {"lng":106.642886,"lat":26.383043,"count":20},//丹4
+                      {"lng":106.643857,"lat":26.382462,"count":20},//丹1
+                      {"lng":106.644637,"lat":26.383504,"count":20},//丹2
+                      {"lng":106.641783,"lat":26.382889,"count":20},//丹3
+                      {"lng":106.646354,"lat":26.383898,"count":25},//玉1
+                      {"lng":106.647033,"lat":26.383413,"count":25},//玉2
+                      {"lng":106.645677,"lat":26.382952,"count":25},//玉3
+                      {"lng":106.646603,"lat":26.382394,"count":25},//玉4
+                      {"lng":106.644951,"lat":26.382029,"count":25},//玉5
+                      {"lng":106.643958,"lat":26.373819,"count":10},//樱2
+                      {"lng":106.643078,"lat":26.373838,"count":10},//樱1
+                      {"lng":106.642896,"lat":26.372752,"count":16},//樱3
+                      {"lng":106.643872,"lat":26.373203,"count":15}//樱4
                  ];
             heatmap4.setDataSet({
                 data:points
