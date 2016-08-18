@@ -36,7 +36,7 @@ border-radius:3px;
    position: relative;
 }*/
 #page-2{
-    background-image: url(images/2BG.jpg);  
+   background-image: url(images/图书馆背景.jpg); 
     position:relative;
     background-size: cover;
 
@@ -161,7 +161,10 @@ border-radius:3px;
     color: #666464;
 }
 
-
+.left img {
+    border:3px solid #272822;
+    color: #666464;
+}
 
 
 #map{
@@ -206,9 +209,7 @@ border-radius:3px;
     color:#FFF
 }
 
-#qingshi ul{
-    bottom:65px;
-}
+
 #loadDiv{   
    position:absolute;   
    left:40%;   
@@ -241,6 +242,57 @@ border-radius:3px;
   display: none;
 }
 
+ .section{ overflow: hidden  }
+        .section .left{ position: absolute; top: 50%; margin-top: -200px; left: 5%; z-index: 2}
+        .section .left li{ text-align:center;float: left; margin-right: 20px; transition: 0.8s; }
+        .section .left li p{ margin: 20px 0; font-size: 18px; color:#333 }
+        .section .right{ position: absolute; right: 5%;border-right:2px solid #000000; padding-right: 10px; text-align: right; top: 15%;z-index: 3; transition: 0.8s }
+        .section .right h1{ font-size:34px; color:#333; font-weight:100;}
+        .section .right p{ font-size:18px; color:#333; line-height:1.5em;margin-top:20px; margin-bottom:10px; }
+        .section .right a{ color:#333;  text-decoration:underline; cursor: pointer; }
+        .section .right a:hover{ text-decoration:none;}
+        .section .bg{ position: absolute; bottom: 0; right: 0; z-index: 1 }
+
+        
+        .s2 .left li{ -webkit-transform: translateY(1000px); transform: translateY(1000px); }
+        .s2 .left li:nth-child(1){ transition-delay: 0.8s }
+        .s2 .left li:nth-child(2){ transition-delay: 0.9s }
+        .s2 .left li:nth-child(3){ transition-delay: 1s }
+        .s2.active .left li{ -webkit-transform: translateY(0); transform: translateY(0); }
+        .s2 .right{ -webkit-transform: translateY(-500px);  transform: translateY(-500px); transition-delay: 1.2s}
+        .s2.active .right{ -webkit-transform: translateY(0); transform: translateY(0);}
+
+        
+        .s3 .left li{ transition-delay: 0.8s }
+        .s3 .left li:nth-child(2){ -webkit-transform: translateX(-279px); transform: translateX(-279px) }
+        .s3 .left li:nth-child(3){ -webkit-transform: translateX(-558px); transform: translateX(-558px) }
+        .s3.active .left li{ -webkit-transform: translateX(0); transform: translateX(0) }
+        .s3 .right{ -webkit-transform: translateX(500px); transform: translateX(500px); transition-delay: 1.2s}
+        .s3.active .right{ -webkit-transform: translateX(0); transform: translateX(0); }
+
+        
+        .s4 .left li:nth-child(1){ -webkit-transform: translate(330px,-1000px); transform: translate(330px,-1000px) }
+        .s4.active .left li:nth-child(1){ -webkit-animation: move1 2s 0.8s forwards; animation: move1 2s 0.8s forwards }
+        .s4 .left li:nth-child(2){ -webkit-transform: translate(0,-1000px); transform: translate(0,-1000px) }
+        .s4.active .left li:nth-child(2){ -webkit-animation: move2 2s 0.8s forwards; animation: move2 2s 0.8s forwards }
+        .s4 .left li:nth-child(3){ -webkit-transform: translate(-330px,-1000px); transform: translate(-330px,-1000px) }
+        .s4.active .left li:nth-child(3){ -webkit-animation: move3 2s 0.8s forwards; animation: move3 2s 0.8s forwards }
+        .s4 .right{ opacity: 0; transition: 0.8s 2.5s}
+        .s4.active .right{ opacity: 1 }
+
+        .s5{ perspective: 500px }
+        .s5 .left li{ -webkit-transform: translate3d(-1000px,-800px,-500px) rotateX(145deg); transform: translate3d(-1000px,-800px,-500px) rotateX(145deg) }
+        .s5.active .left li:nth-child(1){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 0.8s }
+        .s5.active .left li:nth-child(2){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 1s }
+        .s5.active .left li:nth-child(3){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 1.2s }
+        .s5 .right{ opacity: 0; transition: 0.8s 1.8s}
+        .s5.active .right{ opacity: 1 }
+        li{
+          list-style-type:none;
+        }
+
+       
+        
 </style>
 <script src="scripts/jquery.js"></script>
 <script src="scripts/jquery.fullPage.js"></script>
@@ -296,10 +348,7 @@ window.onload=$(function(){
         $('.section1').find('div').fadeIn(500);
     
       }
-      if(index == 2){
-        $('.section2').find('div').fadeIn(500);
-    
-      }
+     
       if(index == 3){
         $('.section3').find('section').fadeIn(0);
          
@@ -317,10 +366,7 @@ window.onload=$(function(){
         $('.section1').find('div').fadeOut(2000);
       
       }
-      if(index == '2'){
-        $('.section2').find('div').fadeOut(2000);
-      
-      }
+     
       if(index == '3'){
         $('.section3').find('section').fadeOut(2000);
       
@@ -405,7 +451,32 @@ setInterval(function(){
 
 
     <div class="section section2 s2" id="page-2">
-	</div>
+	<div class="left">
+                <ul>
+                    <li>
+                        <a href="sonpage/son1/社交关系图.html"><img src="images/关系图.jpg" width=240px  height=290px></a>
+                        <p><a href="sonpage/son1/社交关系图.html">社交关系图</a><br><a href="sonpage/son1/社交关系图.html">书联系了人与人</a></p>
+                     
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/img1.jpg" width=240px  height=290px></a>
+                        <p><a href="#">社交关系图</a><br><a href="#">书联系了人与人</a></p>
+                    </li>
+                    <li>
+                         <a href="#"><img src="images/img2.jpg" width=240px  height=290px></a>
+                        <p><a href="#">社交关系图</a><br><a href="#">书联系了人与人</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <h1>数据</h1>
+                <p>贵州财经大学<br>图书馆</p>
+              
+            </div>
+            
+
+
+  </div>
 	                     
   
 
@@ -523,21 +594,11 @@ Expand.init();
         <li id="st4"><a href="#">四食堂</a></li>
         <li id="yc"><a href="#">隐藏</a></li>
         </ul>
-
-         <div class="shitang" id="qingshi">
-         <ul class="abc">
-        <li id="czy"><a href="#">翠竹苑</a></li>
-        <li id="dgy"><a href="#">丹桂苑</a></li>
-        <li id="yly"><a href="#">玉兰苑</a></li>
-        <li id="yhy"><a href="#">樱花苑</a></li>
-        <li id="yc2"><a href="#">隐藏</a></li>
-        </ul>
-        </div>
         </div>
         <ul class="abc">
-        <li id="zoomin" style="position: absolute;left:10px;bottom:240px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</li>
-        <li id="zoomout" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</li>
-        <li id="cl1" style="position: absolute;left:10px;bottom:120px;width:100px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">距离量测</li>
+        <li id="zoomin" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</li>
+        <li id="zoomout" style="position: absolute;left:10px;bottom:120px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</li>
+       
         </ul>
         
        
@@ -666,171 +727,40 @@ Guizhou Province Key & Special Laboratory of "Technology & Security of E-Busines
 
 
   
-     map.plugin(["AMap.RangingTool"], function() {
-        ruler1 = new AMap.RangingTool(map);
-        AMap.event.addListener(ruler1, "end", function(e) {
-            ruler1.turnOff();
-        });
-        var sMarker = {
-            icon: new AMap.Icon({
-                size: new AMap.Size(19, 31),//图标大小
-                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png"
-            })
-        };
-        var eMarker = {
-            icon: new AMap.Icon({
-                size: new AMap.Size(19, 31),//图标大小
-                image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b2.png"
-            }),
-            offset: new AMap.Pixel(-9, -31)
-        };
-        var lOptions = {
-            strokeStyle: "solid",
-            strokeColor: "#FF33FF",
-            strokeOpacity: 1,
-            strokeWeight: 2
-        };
-        var rulerOptions = {startMarkerOptions: sMarker, endMarkerOptions: eMarker, lineOptions: lOptions};
-        ruler2 = new AMap.RangingTool(map, rulerOptions);
-    });
-    //启用默认样式测距
-    function startRuler1() {
-       ruler1.turnOn();
-    }
-    
-      document.getElementById('cl1').onclick=function(){
-       javascript:startRuler1();}
+  
 
-
-
-var marker1_1 = new AMap.Marker({
-        position: [106.641007,26.371704],
-    });
-    marker1_1.setMap(map);
-    marker1_1.setTitle('翠竹苑1栋');
-    marker1_1.hide();
-    // 设置label标签
-    marker1_1.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "翠竹苑1栋" });
-   
-
-    var marker1_2 = new AMap.Marker({
-        position: [106.641158,26.37255],
-    });
-    marker1_2.setMap(map);
-    marker1_2.setTitle('翠竹苑2栋 ');
-    marker1_2.hide();
-    // 设置label标签
-    marker1_2.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "翠竹苑2栋"
-      });
 
 
 
     var marker1_3 = new AMap.Marker({
-        position: [106.640782,26.374347],
+        position: [106.6408900000,26.3734360000],
     });
     marker1_3.setMap(map);
-    marker1_3.setTitle('翠竹苑3栋 ');
-    marker1_3.hide();
+    marker1_3.setTitle('翠竹苑 ');
+ 
 // 设置label标签
     marker1_3.setLabel({
         offset: new AMap.Pixel(20, 20),//
-        content: "翠竹苑3栋"
-      });
-
-
-
-
-    var marker2_4 = new AMap.Marker({
-        position: [106.642886,26.383043],
-    });
-    marker2_4.setMap(map);
-    marker2_4.setTitle('丹桂苑4栋 ');
-    marker2_4.hide();
-
-    // 设置label标签
-    marker2_4.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "丹桂苑4栋"
-      });
-
-
-
-    var marker2_1 = new AMap.Marker({
-        position: [106.643857,26.382462],
-    });
-    marker2_1.setMap(map);
-    marker2_1.setTitle('丹桂苑1栋 ');
-    marker2_1.hide();
-
-    // 设置label标签
-    marker2_1.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "丹桂苑1栋"
-      });
-
-
-
-    var marker2_2 = new AMap.Marker({
-        position: [106.644637,26.383504],
-    });
-    marker2_2.setMap(map);
-    marker2_2.setTitle('丹桂苑2栋 ');
-    marker2_2.hide();
-
-    // 设置label标签
-    marker2_2.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "丹桂苑2栋"
+        content: "翠竹苑"
       });
 
 
 
     var marker2_3 = new AMap.Marker({
-        position: [106.641783,26.382889],
+        position: [106.6440230000,26.3830100000],
     });
     marker2_3.setMap(map);
-    marker2_3.setTitle('丹桂苑3栋 ');
-    marker2_3.hide();
+    marker2_3.setTitle('丹桂苑 ');
+ 
 
     // 设置label标签
     marker2_3.setLabel({
         offset: new AMap.Pixel(20, 20),//
-        content: "丹桂苑3栋"
+        content: "丹桂苑"
       });
 
 
 
-
-    var marker3_1 = new AMap.Marker({
-        position: [106.646354,26.383898],
-    });
-    marker3_1.setMap(map);
-    marker3_1.setTitle('玉兰苑1栋 ');
-    marker3_1.hide();
-
-    // 设置label标签
-    marker3_1.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "玉兰苑1栋"
-      });
-
-
-    var marker3_2 = new AMap.Marker({
-        position: [106.647033,26.383413],
-    });
-    marker3_2.setMap(map);
-    marker3_2.setTitle('玉兰苑2栋 ');
-    marker3_2.hide();
-
-    // 设置label标签
-    marker3_2.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "玉兰苑2栋"
-      });
 
 
 
@@ -838,105 +768,42 @@ var marker1_1 = new AMap.Marker({
         position: [106.64567,26.382952],
     });
     marker3_3.setMap(map);
-    marker3_3.setTitle('玉兰苑3栋 ');
-    marker3_3.hide();
+    marker3_3.setTitle('玉兰苑 ');
+   
 
     // 设置label标签
     marker3_3.setLabel({
         offset: new AMap.Pixel(20, 20),//
-        content: "玉兰苑3栋"
+        content: "玉兰苑"
       });
 
 
 
-    var marker3_4 = new AMap.Marker({
-        position: [106.646603,26.382394],
-    });
-    marker3_4.setMap(map);
-    marker3_4.setTitle('玉兰苑4栋 ');
-    marker3_4.hide();
+  
 
-    // 设置label标签
-    marker3_4.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "玉兰苑4栋"
-      });
-
-
-    var marker3_5 = new AMap.Marker({
-        position: [106.644951,26.382029],
-    });
-    marker3_5.setMap(map);
-    marker3_5.setTitle('玉兰苑5栋 ');
-    marker3_5.hide();
-
-    // 设置label标签
-    marker3_5.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "玉兰苑5栋"
-      });
-
-
-    var marker4_2 = new AMap.Marker({
-        position: [106.643958,26.373819],
-    });
-    marker4_2.setMap(map);
-    marker4_2.setTitle('樱花苑2栋 ');
-    marker4_2.hide();
-
-    // 设置label标签
-    marker4_2.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "樱花苑2栋"
-      });
-
-
-
-    var marker4_1 = new AMap.Marker({
-        position: [106.643078,26.373838],
-    });
-    marker4_1.setMap(map);
-    marker4_1.setTitle('樱花苑1栋 ');
-    marker4_1.hide();
-
-    // 设置label标签
-    marker4_1.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "樱花苑1栋"
-      });
-    
-
-
-    var marker4_3 = new AMap.Marker({
-        position: [106.642896,26.372752],
-    });
-    marker4_3.setMap(map);
-    marker4_3.setTitle('樱花苑3栋 ');
-    marker4_3.hide();
-
-    // 设置label标签
-    marker4_3.setLabel({
-        offset: new AMap.Pixel(20, 20),//
-        content: "樱花苑3栋"
-      });
-    
+   
 
 
     var marker4_4 = new AMap.Marker({
         position: [106.643872,26.373203],
     });
     marker4_4.setMap(map);
-    marker4_4.setTitle('樱花苑4栋 ');
-    marker4_4.hide();
+    marker4_4.setTitle('樱花苑 ');
+   
 
     // 设置label标签
     marker4_4.setLabel({
         offset: new AMap.Pixel(20, 20),//
-        content: "樱花苑4栋"
+        content: "樱花苑"
       });
 
 var marker5_1 = new AMap.Marker({
         position: [106.641829,26.371088],
+     icon: new AMap.Icon({            
+            size: new AMap.Size(30, 36),  //图标大小
+            image: src="images/食堂.jpg",
+            imageOffset: new AMap.Pixel(0, -60)
+             })  
     });
     marker5_1.setMap(map);
     // 
@@ -955,6 +822,11 @@ var marker5_1 = new AMap.Marker({
 
     var marker5_2 = new AMap.Marker({
         position: [106.642112,26.37427],
+    icon: new AMap.Icon({            
+            size: new AMap.Size(30, 36),  //图标大小
+            image: src="images/食堂.jpg",
+            imageOffset: new AMap.Pixel(0, -60)
+             })  
     });
     marker5_2.setMap(map);
     // 
@@ -972,6 +844,11 @@ var marker5_1 = new AMap.Marker({
 
     var marker5_3 = new AMap.Marker({
         position: [106.642709,26.382269],
+     icon: new AMap.Icon({            
+            size: new AMap.Size(30, 36),  //图标大小
+            image: src="images/食堂.jpg",
+            imageOffset: new AMap.Pixel(0, -60)
+             })  
     });
     marker5_3.setMap(map);
     // 
@@ -988,6 +865,11 @@ var marker5_1 = new AMap.Marker({
 
     var marker5_4 = new AMap.Marker({
         position: [106.644938,26.384215],
+         icon: new AMap.Icon({            
+            size: new AMap.Size(30, 36),  //图标大小
+            image: src="images/食堂.jpg",
+            imageOffset: new AMap.Pixel(0, -60)
+             })  
     });
     marker5_4.setMap(map);
     // 
@@ -1042,23 +924,7 @@ var marker5_1 = new AMap.Marker({
     });
 
             //show dgy
-         document.getElementById('czy').onclick=function(){
-    marker1_1.show() || marker1_2.show() || marker1_3.show()};
-
-         document.getElementById('dgy').onclick=function(){
-    marker2_1.show() || marker2_2.show() || marker2_3.show() || marker2_4.show()};
-
-         document.getElementById('yly').onclick=function(){
-    marker3_1.show() || marker3_2.show() || marker3_3.show() || marker3_4.show() || marker3_5.show()};
-
-         document.getElementById('yhy').onclick=function(){
-    marker4_1.show() || marker4_2.show() || marker4_3.show() || marker4_4.show()};
-
-   document.getElementById('yc2').onclick=function(){
-                 marker1_1.hide() || marker1_2.hide() || marker1_3.hide() || marker2_1.hide() || marker2_2.hide() || marker2_3.hide() || marker2_4.hide() || marker3_1.hide() || marker3_2.hide() || marker3_3.hide() || marker3_4.hide() || marker3_5.hide() || marker4_1.hide() || marker4_2.hide() || marker4_3.hide() || marker4_4.hide() };
-
-
-
+       
 
 
 
