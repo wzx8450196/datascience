@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="../lib/jquery-1.11.1/jquery.min.js"></script>
+
+
+<title>聚类分析</title>
+<head>
+
+<style type="text/css">
+body{margin:0;padding:0;overflow-x:hidden;}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:12px;color:#626262;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+#menu1{
+	position: fixed;
+	width: 160px;
+	height: 100%;
+}
+#main{
+	position: absolute;
+	left: 160px;
+	top:0;
+	bottom: 0;
+	right: 0;
+}
+/*left*/
+.leftsidebar_box{width:160px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
+.line{height:2px;width:100%;background-image:url(../images/left/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:14px;position:relative;line-height:48px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#666464;padding-left:40px;}
+.leftsidebar_box dd a{color:#f5f5f5;line-height:20px;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(../images/left/system.png)}
+.custom dt{background-image:url(../images/left/custom.png)}
+.channel dt{background-image:url(../images/left/channel.png)}
+.app dt{background-image:url(../images/left/app.png)}
+.cloud dt{background-image:url(../images/left/cloud.png)}
+.syetem_management dt{background-image:url(../images/left/syetem_management.png)}
+.source dt{background-image:url(../images/left/source.png)}
+.statistics dt{background-image:url(../images/left/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+</style>
+
+</head>
+
+<div id="menu1">
+	<div class="leftsidebar_box">
+		<div class="line"></div>
+		<dl class="system_log">
+			<dt onClick="changeImage()">聚类分析<img src="../images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="较贫困类分析.html">较贫困类分析</a></dd>
+            <dd><a href="贫困类分析.html">贫困类分析</a></dd>
+            <dd><a href="普通类分析.html">普通类分析</a></dd>
+            <dd><a href="宽裕类分析.html">宽裕类分析</a></dd>
+            <dd><a href="较宽裕类分析.html">较宽裕类分析</a></dd>
+            <dd><a href="较贫困类与贫困类对比.html">较贫困类与贫困类对比</a></dd>
+            <dd><a href="较贫困类与普通类对比.html">较贫困类与普通类对比</a></dd>
+            <dd><a href="较贫困类与宽裕类对比.html">较贫困类与宽裕类对比</a></dd>
+            <dd><a href="较贫困类与较宽裕类对比.html">较贫困类较宽裕类对比</a></dd>
+            <dd><a href="贫困类与普通类对比.html">贫困类与普通类对比</a></dd>
+            <dd><a href="普通类与较宽裕类对比.html">普通类与较宽裕类对比</a></dd>
+            <dd><a href="宽裕类与较宽裕类对比.html">宽裕类与较宽裕类对比</a></dd>
+		</dl>
+	<dl class="custom">
+			<dt onClick="changeImage()">消费比例图<img src="../images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="../all/xfbl-gs.html">工商学院</a></dd>
+			<dd><a href="../all/xfbl-gg.html">公管学院</a></dd>
+			<dd><a href="../all/xfbl-gk.html">管科学院</a></dd>
+			<dd><a href="../all/xfbl-gj.html">国际商学院</a></dd>
+			<dd><a href="../all/xfbl-kj.html">会计学院</a></dd>
+			<dd><a href="../all/xfbl-jr.html">金融学院</a></dd>
+			<dd><a href="../all/xfbl-jj.html">经济学院</a></dd>
+			<dd><a href="../all/xfbl-st.html">数统学院</a></dd>
+			<dd><a href="../all/xfbl-wy.html">外语学院</a></dd>
+			<dd><a href="../all/xfbl-wf.html">文法学院</a></dd>
+			<dd><a href="../all/xfbl-xx.html">信息学院</a></dd>
+			<dd><a href="../all/xfbl-ys.html">艺术学院</a></dd>
+		</dl>
+	
+		
+	
+		<dl class="statistics">
+			<a href="../sonju.html"><dt>返回</dt></a>
+			
+		</dl>
+	
+	</div>
+</div>
+
+
+  <div id="main"><p style="text-align:center"><img src="分类对比/1.4.png"/></p></div>
+
+
+
+<script type="text/javascript">
+$(".leftsidebar_box dt").css({"background-color":"#333333"});
+$(".leftsidebar_box dt img").attr("src","../images/left/select_xl01.png");
+$(function(){
+
+	$(".custom dd").hide();
+
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").css({"background-color":"#333333"})
+		$(this).css({"background-color": "#666464"});
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","../images/left/select_xl01.png");
+		$(this).parent().find('img').attr("src","../images/left/select_xl.png");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+
+
+
+
+
+</body>
+</html>
