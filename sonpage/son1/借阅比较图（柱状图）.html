@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../son2/lib/htmlwidgets-0.6/htmlwidgets.js"></script>
+<script src="../son2/lib/jquery-1.11.1/jquery.min.js"></script>
+<script src="../son2/lib/underscore-1.8.3/underscore-min.js"></script>
+<link href=" ../son2/lib/highcharts-4.2.4/css/motion.css" rel="stylesheet" />
+<script src="../son2/lib/highcharts-4.2.4/highstock.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/highcharts-more.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/highcharts-3d.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/exporting.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/drilldown.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/data.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/heatmap.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/map.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/treemap.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/funnel.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/solid-gauge.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/modules/reset.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/annotations.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/motion.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/draggable-points.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/pattern-fill-v2.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/text-symbols.js"></script>
+<script src="../son2/lib/highcharts-4.2.4/plugins/symbols-extra.js"></script>
+<link href=" ../son2/lib/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href=" ../son2/lib/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="../son2/lib/highchart-binding-0.4.0/highchart.js"></script>
+<title>借阅比较图（柱状图）</title>
+<head>
+
+<style type="text/css">
+body{margin:0;padding:0;overflow-x:hidden;background-color: #e6e8eb}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:12px;color:#626262;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+#menu1{
+	position: fixed;
+	width: 200px;
+	height: 100%;
+}
+#main{
+	position: absolute;
+	left: 250px;
+	top:0;
+	bottom: 0;
+	right: 0;
+}
+/*left*/
+.leftsidebar_box{width:200px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
+.line{height:2px;width:100%;background-image:url(../son2/images/left/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:14px;position:relative;line-height:48px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#666464;padding-left:40px;}
+.leftsidebar_box dd a{color:#f5f5f5;line-height:20px;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(../son2/images/left/system.png)}
+.custom dt{background-image:url(../son2/images/left/custom.png)}
+.channel dt{background-image:url(../son2/images/left/channel.png)}
+.app dt{background-image:url(../son2/images/left/app.png)}
+.cloud dt{background-image:url(../son2/images/left/cloud.png)}
+.syetem_management dt{background-image:url(../son2/images/left/syetem_management.png)}
+.source dt{background-image:url(../son2/images/left/source.png)}
+.statistics dt{background-image:url(../son2/images/left/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+</style>
+
+</head>
+<body>
+<div id="menu1">
+	<div class="leftsidebar_box">
+		<div class="line"></div>
+		<dl class="system_log">
+			<dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="未对文学类分类关系图.html">未对文学类分类关系图</a></dd>
+			<dd><a href="对文学类分类关系图.html">对文学类分类关系图</a></dd>
+			<dd><a href="关系图分析.html">关系图分析</a></dd>
+		</dl>
+	
+		<dl class="custom">
+			<dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="借阅比例图.html">借阅比例图</a></dd>
+			<dd><a href="借阅比例图分析.html">借阅比例图分析</a></dd>
+			
+		</dl>
+	
+		<dl class="channel">
+			<dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="借阅比较图（饼状图）.html">借阅比较图（饼状图）</a></dd>
+			<dd><a href="借阅比较图（柱状图）.html">借阅比较图（柱状图）</a></dd>
+			<dd><a href="借阅比较图分析.html">借阅比较图分析</a></dd>
+			
+		</dl>
+	
+		<dl class="statistics">
+			<a href="../../index.html#page2"><dt>返回</dt></a>
+			
+		</dl>
+	
+	</div>
+</div>
+
+
+
+
+
+
+<div id="main">
+<div id="htmlwidget_container">
+  <div id="htmlwidget-2359" style="width:100%;height:500px;" class="highchart html-widget"></div>
+</div>
+<script type="application/json" data-for="htmlwidget-2359">{"x":{"hc_opts":{"title":{"text":"2013级非经管类专业F类借阅量比较"},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"turboThreshold":0}},"chart":{"type":"column"},"xAxis":{"categories":["非经管类专业经济类图书的借阅总量","经管类专业经济类图书的借阅总量"]},"series":[{"data":[1657,9244],"name":"借阅量"}]},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-2359">{"viewer":{"width":"100%","height":350,"padding":0,"fill":true},"browser":{"width":"100%","height":500,"padding":0,"fill":true}}</script>
+
+</div>
+
+
+
+<script type="text/javascript">
+$(".leftsidebar_box dt").css({"background-color":"#333333"});
+$(".leftsidebar_box dt img").attr("src","../son2/images/left/select_xl01.png");
+$(function(){
+	$(".system_log dd").hide();
+	$(".custom dd").hide();
+
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").css({"background-color":"#333333"})
+		$(this).css({"background-color": "#666464"});
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","../son2/images/left/select_xl01.png");
+		$(this).parent().find('img').attr("src","../son2/images/left/select_xl.png");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="../../scripts/jquery-1.8.3.min.js"></script>
+
+<script src="lib2/htmlwidgets-0.6/htmlwidgets.js"></script>
+<link href="lib2/vis-4.16.1/vis.min.css" rel="stylesheet" />
+<script src="lib2/vis-4.16.1/vis-network.min.js"></script>
+<script src="lib2/visNetwork-binding-1.0.1/visNetwork.js"></script>
+<title>借阅比较图分析</title>
+<head>
+
+<style type="text/css">
+body{margin:0;padding:0;overflow-x:hidden;background-color: #e6e8eb}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:12px;color:#626262;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+#menu1{
+	position: fixed;
+	width: 200px;
+	height: 100%;
+}
+#main{
+	position: absolute;
+	left: 200px;
+	top:0;
+	bottom: 0;
+	right: 0;
+}
+/*left*/
+.leftsidebar_box{width:200px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
+.line{height:2px;width:100%;background-image:url(../son2/images/left/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:14px;position:relative;line-height:48px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#666464;padding-left:40px;}
+.leftsidebar_box dd a{color:#f5f5f5;line-height:20px;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(../son2/images/left/system.png)}
+.custom dt{background-image:url(../son2/images/left/custom.png)}
+.channel dt{background-image:url(../son2/images/left/channel.png)}
+.app dt{background-image:url(../son2/images/left/app.png)}
+.cloud dt{background-image:url(../son2/images/left/cloud.png)}
+.syetem_management dt{background-image:url(../son2/images/left/syetem_management.png)}
+.source dt{background-image:url(../son2/images/left/source.png)}
+.statistics dt{background-image:url(../son2/images/left/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+p{
+	font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+<div id="menu1">
+	<div class="leftsidebar_box">
+		<div class="line"></div>
+		<dl class="system_log">
+			<dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="未对文学类分类关系图.html">未对文学类分类关系图</a></dd>
+			<dd><a href="对文学类分类关系图.html">对文学类分类关系图</a></dd>
+			<dd><a href="关系图分析.html">关系图分析</a></dd>
+		</dl>
+	
+		<dl class="custom">
+			<dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="借阅比例图.html">借阅比例图</a></dd>
+			<dd><a href="借阅比例图分析.html">借阅比例图分析</a></dd>
+			
+		</dl>
+	
+		<dl class="channel">
+			<dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt>
+			<dd class="first_dd"><a href="借阅比较图（饼状图）.html">借阅比较图（饼状图）</a></dd>
+			<dd><a href="借阅比较图（柱状图）.html">借阅比较图（柱状图）</a></dd>
+			<dd><a href="借阅比较图分析.html">借阅比较图分析</a></dd>
+			
+		</dl>
+	
+		
+		<dl class="statistics">
+			<a href="../../index.html#page2"><dt>返回</dt></a>
+			
+		</dl>
+	
+	</div>
+</div>
+
+
+
+
+
+
+<div id="main">
+<div id="htmlwidget_container">
+  <p>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp贵州财经大学图书馆使用的图书分类法是中图法，F类图书表示的是经济类图书，而我校又是经济管理类的大学，所以将F类图书作为一个特殊的类别进行分析。
+以下图形显示的是贵州财经大学2013级非经管类专业与经管类专业F类（经济类）图书借阅总量的比较：
+
+  </p>
+  <a href="借阅比较图（柱状图）.html"><img src="借阅图3.jpg" /></a>
+<p>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp上图两个板块分别表示的是2013级非经管类专业与经管类专业的F类（经济类）图书借阅总量。N表示的是非经管类专业经济类图书的借阅总量，Y表示的是经管类专业经济类图书的借阅总量。
+当鼠标悬浮在某一板块时，会显示相应版块的数据。从图中可得，非经管类专业的借阅量是1657本次，而经管类专业的借阅量是9244本次。可以从中体现出我们学校经济管理类大学的特征。
+
+</p>
+<p style="text-align:center"><a href="借阅比较图（饼状图）.html"><img src="借阅图4.jpg" /></a></p>
+<p>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp以上两张图中，第一张显示的是非经管类专业和经管类专业的经济类图书的借阅量的总量，第二张显示的是两类专业的借阅总量和比例，可以得出，经管类借阅量的比例是84.8%，非经管类专业的借阅量的比例是15.2%。
+</p>
+</div>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+$(".leftsidebar_box dt").css({"background-color":"#333333"});
+$(".leftsidebar_box dt img").attr("src","../son2/images/left/select_xl01.png");
+$(function(){
+	$(".custom dd").hide();
+	$(".system_log dd").hide();
+
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").css({"background-color":"#333333"})
+		$(this).css({"background-color": "#666464"});
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","../son2/images/left/select_xl01.png");
+		$(this).parent().find('img').attr("src","../son2/images/left/select_xl.png");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+
+
+
+
+</body>
+</html>

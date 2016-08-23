@@ -197,7 +197,7 @@ border-radius:3px;
     display:block;
     height:30px;
     line-height:30px;
-    width:100px;
+    width:80px;
     text-indent:10px;
     color: #fff;
 }
@@ -207,6 +207,28 @@ border-radius:3px;
 {
     background-color:#4196fc;
     color:#FFF
+}
+#qingshi ul{
+    bottom:80px;
+}
+#shuoming1{
+  width: 400px;
+  height: 30px;
+  bottom: 105px;
+  right: 5px;
+  z-index: 1;
+  position: absolute;
+}
+#shuoming1 a,#shuoming2 a {
+  color: #f0f7ff;
+}
+#shuoming2{
+  width: 400px;
+  height: 30px;
+  bottom: 45px;
+  right: 5px;
+  z-index: 1;
+  position: absolute;
 }
 
 
@@ -263,30 +285,7 @@ border-radius:3px;
         .s2.active .right{ -webkit-transform: translateY(0); transform: translateY(0);}
 
         
-        .s3 .left li{ transition-delay: 0.8s }
-        .s3 .left li:nth-child(2){ -webkit-transform: translateX(-279px); transform: translateX(-279px) }
-        .s3 .left li:nth-child(3){ -webkit-transform: translateX(-558px); transform: translateX(-558px) }
-        .s3.active .left li{ -webkit-transform: translateX(0); transform: translateX(0) }
-        .s3 .right{ -webkit-transform: translateX(500px); transform: translateX(500px); transition-delay: 1.2s}
-        .s3.active .right{ -webkit-transform: translateX(0); transform: translateX(0); }
-
-        
-        .s4 .left li:nth-child(1){ -webkit-transform: translate(330px,-1000px); transform: translate(330px,-1000px) }
-        .s4.active .left li:nth-child(1){ -webkit-animation: move1 2s 0.8s forwards; animation: move1 2s 0.8s forwards }
-        .s4 .left li:nth-child(2){ -webkit-transform: translate(0,-1000px); transform: translate(0,-1000px) }
-        .s4.active .left li:nth-child(2){ -webkit-animation: move2 2s 0.8s forwards; animation: move2 2s 0.8s forwards }
-        .s4 .left li:nth-child(3){ -webkit-transform: translate(-330px,-1000px); transform: translate(-330px,-1000px) }
-        .s4.active .left li:nth-child(3){ -webkit-animation: move3 2s 0.8s forwards; animation: move3 2s 0.8s forwards }
-        .s4 .right{ opacity: 0; transition: 0.8s 2.5s}
-        .s4.active .right{ opacity: 1 }
-
-        .s5{ perspective: 500px }
-        .s5 .left li{ -webkit-transform: translate3d(-1000px,-800px,-500px) rotateX(145deg); transform: translate3d(-1000px,-800px,-500px) rotateX(145deg) }
-        .s5.active .left li:nth-child(1){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 0.8s }
-        .s5.active .left li:nth-child(2){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 1s }
-        .s5.active .left li:nth-child(3){ -webkit-transform: translate3d(0,0,0) rotateX(0deg); transform: translate3d(0,0,0) rotateX(0deg); transition-delay: 1.2s }
-        .s5 .right{ opacity: 0; transition: 0.8s 1.8s}
-        .s5.active .right{ opacity: 1 }
+      
         li{
           list-style-type:none;
         }
@@ -454,17 +453,17 @@ setInterval(function(){
 	<div class="left">
                 <ul>
                     <li>
-                        <a href="sonpage/son1/社交关系图.html"><img src="images/关系图.jpg" width=240px  height=290px></a>
-                        <p><a href="sonpage/son1/社交关系图.html">社交关系图</a><br><a href="sonpage/son1/社交关系图.html">书联系了人与人</a></p>
+                        <a href="sonpage/son1/未对文学类分类关系图.html"><img src="images/关系图.jpg" width=240px  height=290px></a>
+                        <p><a href="sonpage/son1/未对文学类分类关系图.html">社交关系图</br>书联系了人与人</a></p>
                      
                     </li>
                     <li>
-                        <a href="#"><img src="images/img1.jpg" width=240px  height=290px></a>
-                        <p><a href="#">社交关系图</a><br><a href="#">书联系了人与人</a></p>
+                        <a href="sonpage/son1/借阅比例图.html"><img src="images/借阅图.jpg" width=240px  height=290px></a>
+                        <p><a href="sonpage/son1/借阅比例图.html">借阅比例图<br>经济类图书占非经管类专业的</br>图书借阅总量的比例</a></p>
                     </li>
                     <li>
-                         <a href="#"><img src="images/img2.jpg" width=240px  height=290px></a>
-                        <p><a href="#">社交关系图</a><br><a href="#">书联系了人与人</a></p>
+                         <a href="sonpage/son1/借阅比较图（饼状图）.html"><img src="images/借阅图2.jpg" width=240px  height=290px></a>
+                        <p><a href="sonpage/son1/借阅比较图（饼状图）.html">借阅比较图<br>非经管类专业与经管类专业经济类</br>图书借阅总量的比较</a></p>
                     </li>
                 </ul>
             </div>
@@ -586,6 +585,15 @@ Expand.init();
 </div >
     <div class="section dc section4" id="page-4">
         <div class="slide" id="map">
+         <div class="shitang" id="qingshi">
+         <ul class="abc">
+        <li id="czy"><a href="#">翠竹苑</a></li>
+        <li id="dgy"><a href="#">丹桂苑</a></li>
+        <li id="yly"><a href="#">玉兰苑</a></li>
+        <li id="yhy"><a href="#">樱花苑</a></li>
+        <li id="yc2"><a href="#">隐藏</a></li>
+        </ul>
+        </div>
         <div class="shitang">
         <ul class="abc">
         <li id="yst"><a href="#">一食堂</a></li>
@@ -598,10 +606,13 @@ Expand.init();
         <ul class="abc">
         <li id="zoomin" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</li>
         <li id="zoomout" style="position: absolute;left:10px;bottom:120px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</li>
-       
         </ul>
-        
-       
+        <div id="shuoming1">
+        <a>食堂相对于寝室热力图</a>
+        </div>
+       <div id="shuoming2">
+        <a>寝室相对于食堂热力图</a>
+        </div>       
     </div>
 
 
@@ -809,7 +820,7 @@ var marker5_1 = new AMap.Marker({
     // 
     
     marker5_1.setTitle('一食堂');
-    marker5_1.hide();
+    
     marker5_1.setAnimation('AMAP_ANIMATION_BOUNCE');
     // 设置label标签
     marker5_1.setLabel({
@@ -832,7 +843,7 @@ var marker5_1 = new AMap.Marker({
     // 
     marker5_2.setAnimation('AMAP_ANIMATION_BOUNCE');
     marker5_2.setTitle('二食堂 ');
-    marker5_2.hide();
+   
 
     // 设置label标签
     marker5_2.setLabel({
@@ -854,7 +865,7 @@ var marker5_1 = new AMap.Marker({
     // 
     marker5_3.setAnimation('AMAP_ANIMATION_BOUNCE');
     marker5_3.setTitle('三食堂 ');
-    marker5_3.hide();
+    
 
     // 设置label标签
     marker5_3.setLabel({
@@ -875,7 +886,7 @@ var marker5_1 = new AMap.Marker({
     // 
     marker5_4.setAnimation('AMAP_ANIMATION_BOUNCE');
     marker5_4.setTitle('四食堂 ');
-    marker5_4.hide();
+   
     // 设置label标签
     marker5_4.setLabel({
         offset: new AMap.Pixel(20, 20),//
@@ -1092,6 +1103,129 @@ var marker5_1 = new AMap.Marker({
     //isHotspot:true
 
     
+            var heatmap5= new AMap.Heatmap(map);
+            var points=[
+                      {"lng":106.641829,"lat":26.371088,"count":40},//1食堂
+                      {"lng":106.642112,"lat":26.37427,"count":50},//2食堂
+                      {"lng":106.642709,"lat":26.382269,"count":15},//3食堂
+                      {"lng":106.644938,"lat":26.384215,"count":8},//4食堂
+                     
+                 ];
+            heatmap5.setDataSet({
+                data:points
+            });
+            heatmap5.hide(),
+            heatmap5.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap5.setOptions({
+            radius:120,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    });
+ document.getElementById('czy').onclick=function(){
+    heatmap5.show()
+     /* if(heatmap5.getOptions() == "Object"){
+        heatmap5.hide()
+       }
+       else{
+        heatmap5.show()
+       }*/
+    };  
+
+    var heatmap6= new AMap.Heatmap(map);
+            var points=[
+                      {"lng":106.641829,"lat":26.371088,"count":30},//1食堂
+                      {"lng":106.642112,"lat":26.37427,"count":26},//2食堂
+                      {"lng":106.642709,"lat":26.382269,"count":50},//3食堂
+                      {"lng":106.644938,"lat":26.384215,"count":46},//4食堂
+                     
+                 ];
+            heatmap6.setDataSet({
+                data:points
+            });
+            heatmap6.hide(),
+            heatmap6.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap6.setOptions({
+            radius:120,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    });
+ document.getElementById('dgy').onclick=function(){
+        heatmap6.show()
+
+    };  
+
+    var heatmap7= new AMap.Heatmap(map);
+            var points=[
+                      {"lng":106.641829,"lat":26.371088,"count":30},//1食堂
+                      {"lng":106.642112,"lat":26.37427,"count":46},//2食堂
+                      {"lng":106.642709,"lat":26.382269,"count":50},//3食堂
+                      {"lng":106.644938,"lat":26.384215,"count":66},//4食堂
+                     
+                 ];
+            heatmap7.setDataSet({
+                data:points
+            });
+            heatmap7.hide(),
+            heatmap7.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap7.setOptions({
+            radius:120,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    });
+document.getElementById('yly').onclick=function(){
+        heatmap7.show()
+
+    };
+
+
+    var heatmap8= new AMap.Heatmap(map);
+            var points=[
+                      {"lng":106.641829,"lat":26.371088,"count":60},//1食堂
+                      {"lng":106.642112,"lat":26.37427,"count":50},//2食堂
+                      {"lng":106.642709,"lat":26.382269,"count":30},//3食堂
+                      {"lng":106.644938,"lat":26.384215,"count":28},//4食堂
+                     
+                 ];
+            heatmap8.setDataSet({
+                data:points
+            });
+            heatmap8.hide(),
+            heatmap8.setDataSet({data:points,max:100}); //设置热力图数据集
+            heatmap8.setOptions({
+            radius:120,
+            gradient:{
+            0.25:'blue',
+            0.325:'rgb(117,211,248)',
+            0.35:'rgb(0, 255, 0)',
+            0.45:'#ffea00',
+            0.5:'red'
+        }
+    });
+
+document.getElementById('yhy').onclick=function(){
+        heatmap8.show()
+
+    };
+document.getElementById('yc2').onclick=function(){
+        heatmap5.hide() || heatmap6.hide() || heatmap7.hide() || heatmap8.hide()
+
+    };
+
     })
 
 
