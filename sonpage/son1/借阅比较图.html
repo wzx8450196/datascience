@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../../scripts/jquery-1.8.3.min.js"></script>
+<link href="lib2/vis-4.16.1/vis.min.css" rel="stylesheet" />
+<script src="echarts.min.js"></script>
 <script src="../son2/lib/htmlwidgets-0.6/htmlwidgets.js"></script>
 <script src="../son2/lib/jquery-1.11.1/jquery.min.js"></script>
 <script src="../son2/lib/underscore-1.8.3/underscore-min.js"></script>
@@ -28,7 +31,7 @@
 <link href=" ../son2/lib/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
 <link href=" ../son2/lib/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
 <script src="../son2/lib/highchart-binding-0.4.0/highchart.js"></script>
-<title>借阅比较图（柱状图）</title>
+<title>借阅比较图</title>
 <head>
 
 <style type="text/css">
@@ -44,11 +47,56 @@ a{text-decoration:none;}
 	height: 100%;
 }
 #main{
-	position: absolute;
-	left: 250px;
+	position: relative;
+	left: 200px;
 	top:0;
 	bottom: 0;
-	right: 0;
+	height: 100%;
+}
+#main1{
+	position: absolute;
+	left: 0px;
+	width:40%;
+	top:0;
+	bottom: 0;
+}
+#main2{
+
+	position: absolute;
+	right: 200px;
+	width:40%;
+	top:0;
+	bottom: 0;
+}
+#an{
+  width: 100px;
+  height: 35px;
+  bottom: 45px;
+  right: 50px;
+  z-index: 1;
+  position: fixed;
+  border-radius: 5px;
+  background-color: #333;
+
+}
+
+#an a{
+	display: block;
+	font-size: 20px;
+    height:30px;
+    line-height:30px;
+    color: #fff;
+}
+#an li{
+	    list-style:none;
+	    text-align:center;   
+}
+
+ a {
+  opacity:0.5;transition: opacity .2s ease-in-out;
+}
+ a:hover{
+  opacity: 1;
 }
 /*left*/
 .leftsidebar_box{width:200px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
@@ -70,37 +118,39 @@ a{text-decoration:none;}
 
 </head>
 <body>
+<div id="an">
+<li>
+<a href="借阅比较图分析.html">分析报告</a>
+</li>
+</div>
 <div id="menu1">
-	<div class="leftsidebar_box">
-		<div class="line"></div>
-		<dl class="system_log">
-			<dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="未对文学类分类关系图.html">未对文学类分类关系图</a></dd>
-			<dd><a href="对文学类分类关系图.html">对文学类分类关系图</a></dd>
-			<dd><a href="关系图分析.html">关系图分析</a></dd>
-		</dl>
-	
-		<dl class="custom">
-			<dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="借阅比例图.html">借阅比例图</a></dd>
-			<dd><a href="借阅比例图分析.html">借阅比例图分析</a></dd>
-			
-		</dl>
-	
-		<dl class="channel">
-			<dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="借阅比较图（饼状图）.html">借阅比较图（饼状图）</a></dd>
-			<dd><a href="借阅比较图（柱状图）.html">借阅比较图（柱状图）</a></dd>
-			<dd><a href="借阅比较图分析.html">借阅比较图分析</a></dd>
-			
-		</dl>
-	
-		<dl class="statistics">
-			<a href="../../index.html#page2"><dt>返回</dt></a>
-			
-		</dl>
-	
-	</div>
+    <div class="leftsidebar_box">
+        <div class="line"></div>
+        <dl class="system_log">
+            <a href="社交关系图.html"><dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt></a>
+            
+            
+        </dl>
+    
+        <dl class="custom">
+            <a href="借阅比例图.html"><dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt></a>
+            
+            
+        </dl>
+    
+        <dl class="channel">
+            <a href="借阅比较图.html"><dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt></a>
+            
+            
+            
+        </dl>
+    
+        <dl class="statistics">
+            <a href="../../index.html#page2"><dt>返回</dt></a>
+            
+        </dl>
+    
+    </div>
 </div>
 
 
@@ -109,6 +159,8 @@ a{text-decoration:none;}
 
 
 <div id="main">
+
+<div id="main1">
 <div id="htmlwidget_container">
   <div id="htmlwidget-2359" style="width:100%;height:500px;" class="highchart html-widget"></div>
 </div>
@@ -117,7 +169,61 @@ a{text-decoration:none;}
 
 </div>
 
+<div id="main2"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main2'));
+        var option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    title: {
+        left: 'center',
+        text: '2013级非经管类专业F类借阅量总占比',
+    },
+    legend: {
+        x: 'center',
+        y: 'bottom',
+        data:['经管类','非经管类']
+    },
+    series: [
+        {
+            name:'借阅量',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:9244, name:'经管类'},
+                {value:1657, name:'非经管类'}
+            ]
+        }
+    ]
+};
 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+
+    </div>
 
 <script type="text/javascript">
 $(".leftsidebar_box dt").css({"background-color":"#333333"});

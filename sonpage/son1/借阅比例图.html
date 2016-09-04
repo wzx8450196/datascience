@@ -45,10 +45,17 @@ a{text-decoration:none;}
 }
 #main{
 	position: absolute;
-	left: 250px;
+	left: 200px;
 	top:0;
 	bottom: 0;
 	right: 0;
+}
+
+ a {
+  opacity:0.5;transition: opacity .2s ease-in-out;
+}
+ a:hover{
+  opacity: 1;
 }
 /*left*/
 .leftsidebar_box{width:200px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
@@ -66,36 +73,61 @@ a{text-decoration:none;}
 .source dt{background-image:url(../son2/images/left/source.png)}
 .statistics dt{background-image:url(../son2/images/left/statistics.png)}
 .leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+#an{
+  width: 100px;
+  height: 35px;
+  bottom: 45px;
+  right: 50px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #333;
+
+}
+
+#an a{
+	display: block;
+	font-size: 20px;
+    height:30px;
+    line-height:30px;
+    color: #fff;
+}
+#an li{
+	    list-style:none;
+	    text-align:center;   
+}
 </style>
 
 </head>
 <body>
+<div id="an">
+<li>
+<a href="借阅比例图分析.html">分析报告</a>
+</li>
+</div>
+
 <div id="menu1">
 	<div class="leftsidebar_box">
 		<div class="line"></div>
 		<dl class="system_log">
-			<dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="未对文学类分类关系图.html">未对文学类分类关系图</a></dd>
-			<dd><a href="对文学类分类关系图.html">对文学类分类关系图</a></dd>
-			<dd><a href="关系图分析.html">关系图分析</a></dd>
+			<a href="社交关系图.html"><dt onClick="changeImage()">社交关系图<img src="../son2/images/left/select_xl01.png"></dt></a>
+			
+			
 		</dl>
 	
 		<dl class="custom">
-			<dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="借阅比例图.html">借阅比例图</a></dd>
-			<dd><a href="借阅比例图分析.html">借阅比例图分析</a></dd>
+			<a href="借阅比例图.html"><dt onClick="changeImage()">借阅比例图<img src="../son2/images/left/select_xl01.png"></dt></a>
+			
 			
 		</dl>
 	
 		<dl class="channel">
-			<dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt>
-			<dd class="first_dd"><a href="借阅比较图（饼状图）.html">借阅比较图（饼状图）</a></dd>
-			<dd><a href="借阅比较图（柱状图）.html">借阅比较图（柱状图）</a></dd>
-			<dd><a href="借阅比较图分析.html">借阅比较图分析</a></dd>
+			<a href="借阅比较图.html"><dt>借阅比较图<img src="../son2/images/left/select_xl01.png"></dt></a>
+			
+			
 			
 		</dl>
 	
-		
 		<dl class="statistics">
 			<a href="../../index.html#page2"><dt>返回</dt></a>
 			
@@ -103,6 +135,7 @@ a{text-decoration:none;}
 	
 	</div>
 </div>
+
 
 
 
