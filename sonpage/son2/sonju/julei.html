@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>聚类分析</title>
+<script src="../lib/jquery-1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/highcharts/5.0.0/highcharts.js"></script>
+<script src="https://cdn.bootcss.com/highcharts/5.0.0/highcharts-more.js"></script>
+<script src="https://cdn.bootcss.com/highcharts/5.0.0/js/modules/exporting.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;overflow-x:hidden;}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:12px;color:#626262;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+#menu1{
+    position: fixed;
+    width: 190px;
+    height: 100%;
+}
+#main{
+    position: absolute;
+    left: 190px;
+    top:0;
+    bottom: 0;
+    right: 0;
+}
+/*left*/
+.leftsidebar_box{width:190px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#333333;}
+.line{height:2px;width:100%;background-image:url(../images/left/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:14px;position:relative;line-height:48px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#666464;padding-left:40px;}
+.leftsidebar_box dd a{color:#f5f5f5;line-height:20px;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(../images/left/system.png)}
+.custom dt{background-image:url(../images/left/custom.png)}
+.channel dt{background-image:url(../images/left/channel.png)}
+.app dt{background-image:url(../images/left/app.png)}
+.cloud dt{background-image:url(../images/left/cloud.png)}
+.syetem_management dt{background-image:url(../images/left/syetem_management.png)}
+.source dt{background-image:url(../images/left/source.png)}
+.statistics dt{background-image:url(../images/left/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+</style>
+</head>
+<body>
+<div id="menu1">
+    <div class="leftsidebar_box">
+        <div class="line"></div>
+        <dl class="system_log">
+            <dt onClick="changeImage()">聚类分析<img src="../images/left/select_xl01.png"></dt>
+            <dd class="first_dd"><a href="判断贫困生散点图.html">判断贫困生散点图</a></dd>
+            <dd><a href="julei.html">详细</a></dd>
+            
+        </dl>
+    <dl class="custom">
+            <dt onClick="changeImage()">消费比例图<img src="../images/left/select_xl01.png"></dt>
+            <dd class="first_dd"><a href="../all/xfbl-gs.html">工商学院</a></dd>
+            <dd><a href="../all/xfbl-gg.html">公管学院</a></dd>
+            <dd><a href="../all/xfbl-gk.html">管科学院</a></dd>
+            <dd><a href="../all/xfbl-gj.html">国际商学院</a></dd>
+            <dd><a href="../all/xfbl-kj.html">会计学院</a></dd>
+            <dd><a href="../all/xfbl-jr.html">金融学院</a></dd>
+            <dd><a href="../all/xfbl-jj.html">经济学院</a></dd>
+            <dd><a href="../all/xfbl-st.html">数统学院</a></dd>
+            <dd><a href="../all/xfbl-wy.html">外语学院</a></dd>
+            <dd><a href="../all/xfbl-wf.html">文法学院</a></dd>
+            <dd><a href="../all/xfbl-xx.html">信息学院</a></dd>
+            <dd><a href="../all/xfbl-ys.html">艺术学院</a></dd>
+        </dl>
+    
+        
+    
+        <dl class="statistics">
+            <a href="../sonju.html"><dt>返回</dt></a>
+            
+        </dl>
+    
+    </div>
+</div>
+<div id="main"></div>
+<script>
+$(function () {
+    $('#main').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '早，中，晚餐交易次数平均数',
+              style:{
+                fontWeight: 'bold',
+            }
+
+        },
+        xAxis: {
+            categories: ['较贫困类', '贫困类', '普通类', '宽裕类', '较宽裕类'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '次数',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' 次'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '早餐交易次数(平均)',
+            data: [19.41, 32.23, 25.65, 5.95, 13.7]
+        }, {
+            name: '中餐交易次数(平均)',
+            data: [24.77, 39.04,38.32, 10.23, 24.4]
+        }, {
+            color:'#769e89',
+            name: '晚餐交易次数(平均)',
+            data: [22.6, 37.56, 36.94, 9.2, 22.95]
+        }]
+    });
+});
+
+</script>
+
+<script type="text/javascript">
+$(".leftsidebar_box dt").css({"background-color":"#333333"});
+$(".leftsidebar_box dt img").attr("src","../images/left/select_xl01.png");
+$(function(){
+
+    $(".custom dd").hide();
+
+    $(".leftsidebar_box dt").click(function(){
+        $(".leftsidebar_box dt").css({"background-color":"#333333"})
+        $(this).css({"background-color": "#666464"});
+        $(this).parent().find('dd').removeClass("menu_chioce");
+        $(".leftsidebar_box dt img").attr("src","../images/left/select_xl01.png");
+        $(this).parent().find('img').attr("src","../images/left/select_xl.png");
+        $(".menu_chioce").slideUp(); 
+        $(this).parent().find('dd').slideToggle();
+        $(this).parent().find('dd').addClass("menu_chioce");
+    });
+})
+</script>
+
+</body>
+</html>

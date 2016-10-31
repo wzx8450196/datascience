@@ -46,7 +46,7 @@ border-radius:3px;
     background-size:cover;
 }*/
 
-#page-4{
+#pshitang.png
     background-image: url(images/2BG.jpg);
     background-size:cover;
 
@@ -211,17 +211,7 @@ border-radius:3px;
 #qingshi ul{
     bottom:80px;
 }
-#shuoming1{
-  width: 400px;
-  height: 30px;
-  top: 50px;
-  right: 5px;
-  z-index: 1;
-  position: absolute;
-}
-#shuoming1 a {
-  color: #f0f7ff;
-}
+
 
 
 
@@ -284,7 +274,17 @@ border-radius:3px;
         }
 
        
-        
+         .amap-marker .marker-route {
+            position: absolute;
+            width: 40px;
+            height: 44px;
+            color: #e90000;
+            background: url(images/shitang.png) no-repeat;
+            cursor: pointer;
+        }
+        .amap-marker .marker-marker-bus-from {
+           
+        }      
 </style>
 <script src="scripts/jquery.js"></script>
 <script src="scripts/jquery.fullPage.js"></script>
@@ -602,9 +602,7 @@ Expand.init();
         <li id="zoomin" style="position: absolute;left:10px;bottom:180px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">放大</li>
         <li id="zoomout" style="position: absolute;left:10px;bottom:120px;width:60px;height:40px;z-index:160;background-color:#008cff;color:#FFF;border-radius:3px;line-height:40px;text-align:center;cursor:pointer;">缩小</li>
         </ul>
-        <div id="shuoming1">
-         <a>该地图可显示每个食堂用餐来源的热力图以及每个寝室用餐去向的热力图</a>
-        </div>
+       
              
     </div>
 <script type="text/javascript">
@@ -752,6 +750,7 @@ Guizhou Province Key & Special Laboratory of "Technology & Security of E-Busines
 // 设置label标签
     marker1_3.setLabel({
         offset: new AMap.Pixel(20, 20),//
+
         content: "翠竹苑"
       });
 
@@ -807,21 +806,21 @@ Guizhou Province Key & Special Laboratory of "Technology & Security of E-Busines
         offset: new AMap.Pixel(20, 20),//
         content: "樱花苑"
       });
+    
 
-var marker5_1 = new AMap.Marker({
-        position: [106.641829,26.371088],
-     icon: new AMap.Icon({            
-            size: new AMap.Size(30, 36),  //图标大小
-            image: src="images/食堂.jpg",
-            imageOffset: new AMap.Pixel(0, -60)
-             })  
+var marker5_1 = new AMap.Marker({ //添加自定义点标记
+        map: map,
+        position: [106.641829,26.371088], //基点位置
+        offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+        draggable: false,  //是否可拖动
+        content: '<div class="marker-route marker-marker-bus-from"></div>'   //自定义点标记覆盖物内容
     });
     marker5_1.setMap(map);
     // 
     
     marker5_1.setTitle('一食堂');
     
-    marker5_1.setAnimation('AMAP_ANIMATION_BOUNCE');
+    /*marker5_1.setAnimation('AMAP_ANIMATION_BOUNCE');*/
     // 设置label标签
     marker5_1.setLabel({
         offset: new AMap.Pixel(20, 20),//
@@ -830,18 +829,16 @@ var marker5_1 = new AMap.Marker({
 
 
 
-
-    var marker5_2 = new AMap.Marker({
-        position: [106.642112,26.37427],
-    icon: new AMap.Icon({            
-            size: new AMap.Size(30, 36),  //图标大小
-            image: src="images/食堂.jpg",
-            imageOffset: new AMap.Pixel(0, -60)
-             })  
+   var marker5_2 = new AMap.Marker({ //添加自定义点标记
+        map: map,
+        position: [106.642112,26.37427], //基点位置
+        offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+        draggable: false,  //是否可拖动
+        content: '<div class="marker-route marker-marker-bus-from"></div>'   //自定义点标记覆盖物内容
     });
     marker5_2.setMap(map);
     // 
-    marker5_2.setAnimation('AMAP_ANIMATION_BOUNCE');
+   /* marker5_2.setAnimation('AMAP_ANIMATION_BOUNCE');*/
     marker5_2.setTitle('二食堂 ');
    
 
@@ -853,17 +850,16 @@ var marker5_1 = new AMap.Marker({
 
 
 
-    var marker5_3 = new AMap.Marker({
-        position: [106.642709,26.382269],
-     icon: new AMap.Icon({            
-            size: new AMap.Size(30, 36),  //图标大小
-            image: src="images/食堂.jpg",
-            imageOffset: new AMap.Pixel(0, -60)
-             })  
+    var marker5_3 = new AMap.Marker({ //添加自定义点标记
+        map: map,
+        position: [106.642709,26.382269], //基点位置
+        offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+        draggable: false,  //是否可拖动
+        content: '<div class="marker-route marker-marker-bus-from"></div>'   //自定义点标记覆盖物内容
     });
     marker5_3.setMap(map);
     // 
-    marker5_3.setAnimation('AMAP_ANIMATION_BOUNCE');
+   /* marker5_3.setAnimation('AMAP_ANIMATION_BOUNCE');*/
     marker5_3.setTitle('三食堂 ');
     
 
@@ -874,17 +870,16 @@ var marker5_1 = new AMap.Marker({
       });
 
 
-    var marker5_4 = new AMap.Marker({
-        position: [106.644938,26.384215],
-         icon: new AMap.Icon({            
-            size: new AMap.Size(30, 36),  //图标大小
-            image: src="images/食堂.jpg",
-            imageOffset: new AMap.Pixel(0, -60)
-             })  
+    var marker5_4 = new AMap.Marker({ //添加自定义点标记
+        map: map,
+        position: [106.644938,26.384215], //基点位置
+        offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+        draggable: false,  //是否可拖动
+        content: '<div class="marker-route marker-marker-bus-from"></div>'   //自定义点标记覆盖物内容
     });
     marker5_4.setMap(map);
     // 
-    marker5_4.setAnimation('AMAP_ANIMATION_BOUNCE');
+   /* marker5_4.setAnimation('AMAP_ANIMATION_BOUNCE');*/
     marker5_4.setTitle('四食堂 ');
    
     // 设置label标签
