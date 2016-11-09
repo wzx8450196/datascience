@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+    title : {
+        text: '贫困生划分标准',
+        subtext: '抽样调查来自: 一卡通数据'
+    },
+    grid: {
+        left: '3%',
+        right: '7%',
+        bottom: '3%',
+        containLabel: true
+    },
+    tooltip : {
+        trigger: 'axis',
+        showDelay : 0,
+        formatter : function (params) {
+            if (params.value.length > 1) {
+                return params.seriesName + ' :<br/>'
+                   + params.value[0] + '元 '
+                   + params.value[1] + '元 ';
+            }
+            else {
+                return params.seriesName + ' :<br/>'
+                   + params.name + ' : '
+                   + params.value + '元 ';
+            }
+        },
+        axisPointer:{
+            show: true,
+            type : 'cross',
+            lineStyle: {
+                type : 'dashed',
+                width : 1
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {},
+            brush: {
+                type: ['rect', 'polygon', 'clear']
+            }
+        }
+    },
+    brush: {
+    },
+    legend: {
+        data: ['舞蹈学','音乐学','环境设计'],
+        left: 'center'
+    },
+    xAxis : [
+        {
+            type : 'value',
+            scale:true,
+            axisLabel : {
+                formatter: '{value} 元'
+            },
+            splitLine: {
+                show: false
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            scale:true,
+            axisLabel : {
+                formatter: '{value} 元'
+            },
+            splitLine: {
+                show: false
+            }
+        }
+    ],
+    series : [
+        {
+            name:'舞蹈学',
+            type:'scatter',
+            data: [[16.2755, 398.75], [11.2666, 253.5], [11.88, 267.3], [8.7788, 228.25], 
+                   [13.5583, 325.4],  [11.75, 223.25],  [14.6125, 350.7], [10.4688, 235.55], 
+                   [13.5843, 217.35], [17.3461, 451], [10.8186, 232.6], [14.6347, 336.6], 
+                   [14.6825, 293.65], [13.1564, 256.55], [15.7738, 331.25],
+                  ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
+                data : [
+                    {type : 'average', name: '平均值'},
+                    { xAxis: 13 }
+                ]
+            }
+        },
+        {
+            name:'音乐学',
+            type:'scatter',
+            data: [[13.7666, 309.75], [16.5754, 439.25], [8.9565, 206], [11.1428, 234], 
+                   [15.0326, 345.75], [11.0744, 260.25], [9.5902, 196.6], [15.2553, 358.5],
+                   [11.9259, 322], [16.882, 422.05], [14.6486, 271], [16.9893, 399.25], 
+                   [11.4347, 263], [17.6, 308], [13.7843, 351.5],[12.5325, 269.45], 
+                   [11.1054, 305.4], [14.546, 363.65], [12.9222, 290.75]
+            ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                }
+            }
+        },
+        {
+            name:'环境设计',
+            type:'scatter',
+            data: [[18.7105, 533.25], [10.2047, 214.3], [15.8125, 442.75], [9.5487, 195.75], 
+                   [13.6976, 294.5]
+            ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                }
+            }
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

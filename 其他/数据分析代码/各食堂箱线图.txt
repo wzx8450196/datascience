@@ -1,0 +1,100 @@
+
+R version 3.2.5 (2016-04-14) -- "Very, Very Secure Dishes"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+R是自由软件，不带任何担保。
+在某些条件下你可以将其自由散布。
+用'license()'或'licence()'来看散布的详细条件。
+
+R是个合作计划，有许多人为之做出了贡献.
+用'contributors()'来看合作者的详细情况
+用'citation()'会告诉你如何在出版物中正确地引用R或R程序包。
+
+用'demo()'来看一些示范程序，用'help()'来阅读在线帮助文件，或
+用'help.start()'通过HTML浏览器来看帮助文件。
+用'q()'退出R.
+
+[原来保存的工作空间已还原]
+
+> setwd("C:/Users/Administrator/Desktop")
+> #读取一食堂数据
+> data<-read.csv('0103.csv')
+> head(data)
+      学院 交易额
+1 工商学院   15.0
+2 工商学院   11.0
+3 工商学院    4.3
+4 工商学院    4.5
+5 工商学院    6.0
+6 工商学院    4.3
+> library(ggplot2)
+> library(plotly)
+
+载入程辑包：‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+> df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> ggplotly(p)
+> #一食堂箱线图
+> data<-read.csv('0104.csv')
+> head(data)
+      学院 交易额
+1 文法学院    2.7
+2 工商学院    1.5
+3 会计学院    2.0
+4 工商学院    4.0
+5 经济学院    2.5
+6 经济学院    2.5
+>  df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #一食堂4月份箱线图
+> ggplotly(p)
+> data<-read.csv('0204.csv')
+> df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+>  p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #二食堂3月份
+> ggplotly(p)
+> data<-read.csv('0203.csv')
+> df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #二食堂4月份
+> ggplotly(p)
+> data<-read.csv('0303.csv')
+> df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #三食堂3月份
+> ggplotly(p)
+> data<-read.csv('0304.csv')
+> df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #三食堂4月份
+> ggplotly(p)
+> data<-read.csv('0403.csv')
+>  df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #四食堂3月份
+> ggplotly(p)
+> data<-read.csv('0404.csv')
+>  df<-data[sample(1:nrow(data),size=1000),]
+> p<-ggplot(df,aes(学院,交易额))+stat_boxplot(geom='errorbar')+geom_boxplot()
+> p <- ggplot(df, aes(学院,交易额,fill=学院))+ geom_boxplot()
+> #四食堂4月份
+> ggplotly(p)
+> save.image("C:\\Users\\Administrator\\Desktop\\各食堂箱线图")
+> 
